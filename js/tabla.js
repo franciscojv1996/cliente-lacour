@@ -17,14 +17,6 @@
             } else {    cuerpoJ.style.display='none';}
     }
 
-//infantil
-    function infantil(){
-        cuerpoI = document.getElementById("contentI");
-        checkI = document.getElementById("checki");
-            if(checkI.checked){ cuerpoI.style.display='block';
-            }else{ cuerpoI.style.display='none';}
-    }
-
     function mostrar(dato){
         if (dato == "1") {
             document.getElementById("curvAd").style.display = "block";

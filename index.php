@@ -36,16 +36,14 @@
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="checki" onchange="javascript:infantil()">
+                        <input type="checkbox" data-toggle="modal" data-target="#exampleModal"/>
+                        <!-- <input class="form-check-input" type="checkbox" id="checki" onchange="javascript:infantil()"> -->
                         <label class="form-check-label">Tallas Infantil</label>       
                     </div> 
                     
-                    <br><br> </div>
+                    <br><br> 
+                </div>
                 
-                <div class="col-md"> <br>
-
-                </div>  
-                 
             </div> 
         
         </div>
@@ -94,8 +92,32 @@
                         ?>
                     </div>
 
+
+                        <!-- inicio de Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="modal-body">
+                                            <?php
+                                               $e = new modal;
+                                               $e -> Ventana();
+                                            ?>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- final de Modal -->
+                    
                     <div class="" id="contentI" style="display: none;">
-                        <?php 
+                        <?php
                             $d = new conten;
                             $d -> Infantil();
                         ?>
@@ -145,9 +167,9 @@
 
     <script src="js\curva1.js"></script>
     <script src="js\tabla.js"></script>
-    <script src="js\bootstrap.min.js"></script>
-    <script src="js\jquery-3.3.1.slim.min.js"></script>
     <script src="js\jquery.min.js"></script>
+    <script src="js\jquery-3.3.1.slim.min.js"></script>
     <script src="js\popper.min.js"></script>
-</body>
+    <script src="js\bootstrap.min.js"></script>
+
 </html>

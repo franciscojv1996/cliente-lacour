@@ -1,3 +1,64 @@
+<?php
+    class modal{
+        public function Ventana(){
+            ?>
+
+                <div class="container">
+                    <div class="row">
+                
+                        <div class="col">
+
+                            <input type="checkbox" value="" id="">
+                            <label for="">Talla de Meses</label>
+
+                            <div class="border border-dark rounded text-center">
+
+                                <ul class="list-unstyled">
+                                    <li>3M</li>
+                                    <li>6M</li>
+                                    <li>9M</li>
+                                    <li>12M</li>
+                                    <li>18M</li>
+                                    <li>24M</li>
+                                 </ul>
+                                 
+                                 <br>
+                                    <input type="button" value="Calcular" class="btn btn-primary btn-lg btn-block"> 
+                                <br>
+
+                            </div>
+                        </div>
+
+                        <div class="col text-center">
+
+                            <input type="checkbox" value="" id="">
+                            <label for="">Talla de Doble</label>
+
+                            <div class="border border-dark rounded">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col text-center">
+
+                            <input type="checkbox" value="" id="">
+                            <label for="">Talla de Completa</label>
+
+                            <div class="border border-dark rounded">
+
+                            </div>
+
+                        </div>
+                    </div>
+            
+                </div>
+
+            <?php 
+        }
+    }
+?>
+
 <?php 
     class conten{
         public function Infantil(){
