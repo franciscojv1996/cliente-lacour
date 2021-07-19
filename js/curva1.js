@@ -98,7 +98,7 @@ function curva(){
         console.log("piezas a producir " + piezaXL4);
             document.getElementById('TallaXL4').innerHTML = Math.round(piezaXL4);
     }
-    console.log("total de piezas Juveniles"+ suma);    
+    console.log("total de piezas a producir en talla adulto"+ suma);    
 
 //-----------------------------------------------------------------------------------tallas juveniles-------------------------------------------------------------------------------------------
     var totalJ =0, pano1= 0, sm = 0;
@@ -159,8 +159,6 @@ function curva(){
     });
 
     console.log("total de curvas Juveniles "+ totalI);
-
-    var 
 
     var t2 = document.getElementById("t2").value;
     var t4 = document.getElementById("t4").value;

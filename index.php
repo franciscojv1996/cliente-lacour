@@ -68,14 +68,12 @@
                         <label>Cantidad</label>
                     </div>
 
-                    <div id="btnCurva" style="display: none;">
+                    <div id="resCurva" style="display: none;">
+    
                         <div class="custom-control custom-radio">
-                            <input type="button" value="calcular" onclick="curva()" class="btn btn-primary">
+                            <span>El resultado es: </span> <span id="spTotal"></span>
                         </div>
 
-                        <div class="custom-control custom-radio">
-                        <span>El resultado es: </span> <span id="spTotal"></span>
-                        </div>
                     </div>
 
                 </div>
@@ -103,8 +101,11 @@
                         ?>
                     </div>
 
-                </div>  
-                 
+                    <div id="btnCurva" style="display: none;">
+                        <input type="button" value="Calcular" onclick="curva();" class="btn btn-primary btn-lg btn-block"> 
+                    </div>
+
+                </div>
             </div> 
         
         </div>
@@ -119,6 +120,8 @@
                 document.getElementById("curvIn").style.display = "block";
                 document.getElementById("curvJu").style.display = "block";
                 document.getElementById("btnCurva").style.display = "block";
+                document.getElementById("resCurva").style.display = "block";
+
 
                 document.getElementById("CantidadAd").style.display = "none";
                 document.getElementById("CantidadIn").style.display = "none";
@@ -134,6 +137,7 @@
                 document.getElementById("curvIn").style.display = "none";
                 document.getElementById("curvJu").style.display = "none";
                 document.getElementById("btnCurva").style.display = "none";
+                document.getElementById("resCurva").style.display = "none";
             }
         }
 

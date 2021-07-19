@@ -32,7 +32,7 @@
                         <div class="form-row text-center">
                             
                             <div class="form-group col-md">
-                                <label class="">U</label>
+                                <label class="">Unica</label>
                                 <input type="number" min="1" class="form-control form-control-sm montoA" id="u" placeholder="">
                             </div>
 
@@ -138,48 +138,48 @@
                         <div class="form-row text-center">
                             
                             <div class="form-group col-md">
-                                <label class="">U</label>
-                                <input type="number" min="1" class="form-control form-control-sm" id="" placeholder="">
+                                <label class="">Unica</label>
+                                <input type="number" min="1" class="form-control form-control-sm" id="cu" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">XS</label>
-                                <input type="number" min="1" class="form-control form-control-sm" id="" placeholder="">
+                                <input type="number" min="1" class="form-control form-control-sm" id="cxs" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">S</label>
-                                <input type="number" min="1" class="form-control form-control-sm" id="" placeholder="">
+                                <input type="number" min="1" class="form-control form-control-sm" id="cs" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">M</label>
-                                <input type="number" min="1" class="form-control form-control-sm" id="" placeholder="">
+                                <input type="number" min="1" class="form-control form-control-sm" id="cm" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">L</label>
-                                <input type="number" min="1" class="form-control form-control-sm" id="" placeholder="">
+                                <input type="number" min="1" class="form-control form-control-sm" id="cl" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">XL</label>
-                                <input type="number" min="1" class="form-control form-control-sm" id="" placeholder="">
+                                <input type="number" min="1" class="form-control form-control-sm" id="cxl" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">XXL</label>
-                                <input type="number" min="1" class="form-control form-control-sm" id="" placeholder="">
+                                <input type="number" min="1" class="form-control form-control-sm" id="cxxl" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">3XL</label>
-                                <input type="number" min="1" class="form-control form-control-sm" id="" placeholder="">
+                                <input type="number" min="1" class="form-control form-control-sm" id="c3xl" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">4XL</label>
-                                <input type="number" min="1" class="form-control form-control-sm" id="" placeholder="">
+                                <input type="number" min="1" class="form-control form-control-sm" id="c4xl" placeholder="">
                             </div>
 
                         </div>
