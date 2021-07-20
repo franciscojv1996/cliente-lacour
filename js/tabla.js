@@ -17,26 +17,42 @@
             } else {    cuerpoJ.style.display='none';}
     }
 
-    function mostrar(dato){
-        if (dato == "1") {
-            document.getElementById("curvAd").style.display = "block";
-            document.getElementById("curvIn").style.display = "block";
-            document.getElementById("curvJu").style.display = "block";
-            document.getElementById("btnCurva").style.display = "block";
+//infantil
+    function infantil()
+    {
+        //div de tallas infantiles
+         cuerpoM = documen.getElementById("infantilM");
+         cuerpoD = documen.getElementById("infantilD");
+         cuerpoC = documen.getElementById("infantilC");
 
-            document.getElementById("CantidadAd").style.display = "none";
-            document.getElementById("CantidadIn").style.display = "none";
-            document.getElementById("CantidadJu").style.display = "none";
-        }
+        //checkbox de tallas infantiles
+         checkM = documen.getElementById("checkM");
+         checkD = documen.getElementById("checkD");
+         checkC = documen.getElementById("checkC");
 
-        if (dato == "2") {
-            document.getElementById("CantidadAd").style.display = "block";
-            document.getElementById("CantidadIn").style.display = "block";
-            document.getElementById("CantidadJu").style.display = "block";
+            //tallas de Meses
+         if(checkM.checked)
+         {
+            cuerpoM.style.display='block';
+         }else{
+            cuerpoM.style.display='none';
+         }
 
-            document.getElementById("curvAd").style.display = "none";
-            document.getElementById("curvIn").style.display = "none";
-            document.getElementById("curvJu").style.display = "none";
-            document.getElementById("btnCurva").style.display = "none";
-        }
+            //tallas dobles
+         if(checkD.checked)
+         {
+            cuerpoD.style.display='block';
+         }else{
+            cuerpoD.style.display='none';
+         }
+
+            //tallas completas 
+         if(checkC.checked)
+         {
+            cuerpoC.style.display='block';
+         }else{
+            cuerpoC.style.display='none';
+         }
+
     }
+
