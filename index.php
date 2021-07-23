@@ -21,26 +21,46 @@
   
   <div class="container">
     
-    <div class="row justify-content-center" style="background-color: #dd0">
+    <div class="row justify-content-around" style="background-color: #dd0">
 
-      <div class="col-lg-6">
-        
-        <input type="checkbox" id="checka" onchange="javascript:adulto()">
-        <label> Tallas de Adultos</label> <br>
-        
-        <input type="checkbox" id="checkj" onchange="javascript:juvenil()">
-        <label> Tallas Juveniles</label>  <br>
+      <div class="col-lg-5 text-center" style="background-color: #ccc">
+        <h4>Tallas</h4>
 
-        <input type="checkbox" data-toggle="modal" data-target="#exampleModal"/>
-        <label> Tallas Infantiles</label> 
-          <?php 
-            $b = new modal;
-            $b -> Ventana();
-          ?>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="checka" onchange="javascript:adulto()">
+          <label class="form-check-label" for="inlineCheckbox1">Adulto</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="checkj" onchange="javascript:juvenil()">
+          <label class="form-check-label" for="inlineCheckbox2">Juvenil</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" data-toggle="modal" data-target="#exampleModal">
+          <label class="form-check-label" for="inlineCheckbox3">Infantil</label>
+            <?php 
+              $b = new modal;
+              $b -> Ventana();
+            ?>
+        </div>
+          
       </div>
 
-      <div class="col-lg-6">
-        <h2 >lista de curvas y cantidad</h2>
+    <div class="col-lg-5 text-center" style="background-color: #ccc">
+
+      <h4>Tipo de pedido</h4>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="opc" value="1" onchange="mostrar(this.value);" checked>
+          <label class="form-check-label" for="inlineRadio1">Curva</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="opc" value="2" onchange="mostrar(this.value);" >
+          <label class="form-check-label" for="inlineRadio2">Cantidad</label>
+        </div>
+
       </div>
       
     </div>
@@ -53,7 +73,7 @@
         <?php
           $c = new cont;
           $c-> Adulto();
-        ?>
+        ?> 
       </div> 
 
       <div class="col-lg-12" id="contentJ" style="display: none;"> <!--Juvenil-->
@@ -74,6 +94,9 @@
         ?>
       </div>
 
+      <input type="button" value="cantidad" onclick="cantidad()" >
+
+      <input type="button" value="curva">
     </div>
 
   
@@ -89,6 +112,64 @@
           x.style.display = 'none';
       }
     }
+
+    
+function cantidad() {
+
+// tallas adultos
+    var totalAdulto = 0;
+        $(".Adulto").each(function(){
+            if (isNaN(parseInt($(this).val()))) 
+            {   totalAdulto += 0;   }
+                else 
+            {   totalAdulto += parseInt($(this).val());    }
+        });
+    console.log("total de pieazas a producir Adultos" + totalAdulto);
+
+// tallas juveniles
+    var totalJuvenil = 0;
+        $(".Juvenil").each(function(){
+            if (isNaN(parseInt($(this).val()))) 
+            {   totalJuvenil += 0;   }
+                else 
+            {   totalJuvenil += parseInt($(this).val());    }
+        });
+    console.log("total de pieazas a producir Juvenil" + totalJuvenil);
+
+// tallas infantiles
+        
+    // tallas meses
+        var totalInfantileM = 0;
+            $(".InfantilM").each(function(){
+                if (isNaN(parseInt($(this).val()))) 
+                {   totalInfantileM += 0;   }
+                    else 
+                {   totalInfantileM += parseInt($(this).val());    }
+            });
+        console.log("total de pieazas a producir Infantiles Meses" + totalInfantileM);
+    
+    // tallas dobles
+        var totalInfantileD = 0;
+        $(".InfantilD").each(function(){
+            if (isNaN(parseInt($(this).val()))) 
+            {   totalInfantileD += 0;   }
+                else 
+            {   totalInfantileD += parseInt($(this).val());    }
+        });
+    console.log("total de pieazas a producir Infantiles Dobles" + totalInfantileD);
+    
+    
+    // tallas completas
+        var totalInfantileC = 0;
+            $(".InfantilC").each(function(){
+                if (isNaN(parseInt($(this).val()))) 
+                {   totalInfantileC += 0;   }
+                    else 
+                {   totalInfantileC += parseInt($(this).val());    }
+            });
+        console.log("total de pieazas a producir Infantiles Completa" + totalInfantileC);
+    
+}
 
   </script>
 
