@@ -2,26 +2,22 @@
     class cont{
         public function Adulto(){
             ?>
-                <div class="container"> <br>
-                    
-                    <div class="row justify-content-between">
-                        <div class="col-md">
-                            <h3> Tallas de Adultos </h3>
-                        </div>
 
-                        <div class="col-md">
-                            <form>
-                                <div class="form-group row">        
-                                    <input type="number" class="form-control form-control-sm" id="piezasaA" min="100" placeholder="Total de piezas a producir">
-                                </div>
-                            </form>
+                <div class="container">
+                    <h3 class="text-center"> Tallas de Adultos </h3>
+                    
+                    <div class="row justify-content-around"> 
+                        <div class="col-md-4" >
+                            <h4>Curva</h4> 
                         </div>
+                        
+                        <div class="col-md-4">
+                            <input type="number" class="form-control form-control-sm" id="piezasaA" min="100" placeholder="Total de piezas a producir">
+                        </div>  
                     </div>
                     
                     <form>
                         <div id="curvAd"> <!--Curvas style="display:none;"  -->
-                            <p class="text-left h4">Curva</p>
-
                             <!-- formulario de talas  -->
                             <div class="form-row text-center">
                             
@@ -123,7 +119,7 @@
                             
                         </div>
 
-                        <div id="CantidadAd"> <!-- Cantidad style="display:none;"  -->
+                        <div id="CantidadAd" style="display:none;"> <!-- Cantidad style="display:none;"  -->
                             <p class="text-left h4">Cantidad</p>
 
                             <div class="form-row text-center">

@@ -1,246 +1,260 @@
-<?php 
+<?php
     class conten{
-        public function Infantil(){
+        public function InfantilM(){ 
             ?>
-
-                <div class="container">
-                    
-                    <h3> Tallas de Infantiles </h3>
-
-                    <!--tallas de Meses --> <!-- style="display:none;"-->
-                    <div class="col-md" id="infantilM" style="display:none;">
+                <div id="cuerpoIM" style="display:none;">
+                    <div class="container-fluid" >
                         
-                        <div class="row justify-content-around">
-                            <div class="col-md">
-                                <h3> Tallas de Meses </h3>
+                        <div class="row justify-content-around"> 
+                            <div class="col-md-4" >
+                                <h4>Curva</h4> 
                             </div>
-      
-                            <div class="col-md">
-                                <form>
-                                    <div class="form-group row">        
-                                        <input type="number" class="form-control form-control-sm" id="tallaM" min="100" placeholder="Total de piezas a producir">
-                                    </div>
-                                </form>
+                        
+                            <div class="col-md-4">
+                                <input type="number" class="form-control form-control-sm" min="100" placeholder="Total de piezas a producir">
                             </div>  
                         </div>
 
                         <form action="">
-
                             <div class="form-row text-center">
                                 <div class="form-group col-md">
                                     <label>3M</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>6M</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>9M</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>12M</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>18M</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>24M</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
+
                             </div>
 
+                            <!-- mostrar resultado  -->
+                            <div id="resInfantilM" >
+
+                                <div class="form-check form-check-inline" >
+                                    <label class="form-check-label h4">Cantidad: <!-- <span id="sm"></span> --> </label>       
+                                </div>
+
+                                <div class="form-row">
+                            
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Tallae3M"></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla6M"></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla9M"></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla12M" ></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla18M" ></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla24M"></span> </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </form>
 
                     </div>
+                </div>
+            <?php
+        }
+
+        public function InfantilD(){
+            ?>
+                <div id="cuerpoID" style="display:none;">
+                    <div class="container-fluid">
                     
-
-
-                    <!--tallas Dobles --> <!-- style="display:none;"-->
-                    <div class="col-md" id="infantilD" style="display:none;">
-                        
-                        <div class="row justify-content-around">
-                            <div class="col-md">
-                                <h3> Tallas Dobles </h3>
+                        <div class="row justify-content-around"> 
+                            <div class="col-md-4" >
+                                <h4>Curva</h4> 
                             </div>
-      
-                            <div class="col-md">
-                                <form>
-                                    <div class="form-group row">        
-                                        <input type="number" class="form-control form-control-sm" id="TallaD" min="100" placeholder="Total de piezas a producir">
-                                    </div>
-                                </form>
+                        
+                            <div class="col-md-4">
+                                <input type="number" class="form-control form-control-sm" min="100" placeholder="Total de piezas a producir">
                             </div>  
                         </div>
 
                         <form action="">
-
                             <div class="form-row text-center">
                                 <div class="form-group col-md">
                                     <label>2-3</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
-                                </div>
-
-                                <div class="form-group col-md">
-                                    <label>3-4</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>4-5</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
-                                </div>
-
-                                <div class="form-group col-md">
-                                    <label>5-6</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>6-7</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
-                                </div>
-
-                                <div class="form-group col-md">
-                                    <label>7-8</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>8-9</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <label>9-10</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <label>10-11</label>
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
+
                             </div>
 
-                        </form>
+                            <!-- mostrar resultado  -->
+                            <div id="resInfantilD" >
 
-                    </div>
+                                <div class="form-check form-check-inline" >
+                                    <label class="form-check-label h4">Cantidad: <!-- <span id="sm"></span> --> </label>       
+                                </div>
 
-
-
-                    <!--tallas completa --> <!-- style="display:none;"-->
-                    <div class="col-md" id="infantilC" style="display:none;">
-                        
-                        <div class="row justify-content-around">
-                            <div class="col-md">
-                                <h3> Tallas Completa </h3>
-                            </div>
-      
-                            <div class="col-md">
-                                <form>
-                                    <div class="form-group row">        
-                                        <input type="number" class="form-control form-control-sm" id="TallaC" min="100" placeholder="Total de piezas a producir">
+                                <div class="form-row">
+                            
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Tallae23"></span> </p>
                                     </div>
-                                </form>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla45"></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla67"></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla89" ></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla1011" ></span> </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            <?php
+
+        }
+
+        public function InfantilC(){
+            ?>
+                <div id="cuerpoIC" style="display:none;">
+                    <div class="container-fluid">
+                        
+                        <div class="row justify-content-around"> 
+                            <div class="col-md-4" >
+                                <h4>Curva</h4> 
+                            </div>
+                        
+                            <div class="col-md-4">
+                                <input type="number" class="form-control form-control-sm" min="100" placeholder="Total de piezas a producir">
                             </div>  
                         </div>
 
-                        <form action="">                            
-
+                        <form action="">
                             <div class="form-row text-center">
                                 <div class="form-group col-md">
-                                    <label>1</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
-                                </div>
-
-                                <div class="form-group col-md">
                                     <label>2</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
-                                </div>
-
-                                <div class="form-group col-md">
-                                    <label>3</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>4</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
-                                </div>
-
-                                <div class="form-group col-md">
-                                    <label>5</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>6</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
-                                </div>
-
-                                <div class="form-group col-md">
-                                    <label>7</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>8</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
-                                </div>
-
-                                <div class="form-group col-md">
-                                    <label>9</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label>10</label>
-                                    <input type="number" min="1" class="form-control form-control-sm">
+                                    <input type="number" min="1" class="form-control form-control-sm" placeholder="">
                                 </div>
                             </div>
 
+                            <!-- mostrar resultado  -->
+                            <div id="resInfantilM" >
+
+                                <div class="form-check form-check-inline" >
+                                    <label class="form-check-label h4">Cantidad: <!-- <span id="sm"></span> --> </label>       
+                                </div>
+
+                                <div class="form-row">
+                            
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Tallae2"></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla4"></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla6"></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla8" ></span> </p>
+                                    </div>
+
+                                    <div class="form-group col-md">
+                                        <p class="text-center h3"> <span class="sm" id="Talla10" ></span> </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </form>
-
                     </div>
-
                 </div>
+            <?php
 
-                <script>/*
-        function infantil(valor) {
-
-            if(valor =="1"){
-                documen.getElementById("infantilM").style.display='block';
-            }
-
-        //div de tallas infantiles
-         //cuerpoM = documen.getElementById("infantilM");
-         //cuerpoD = documen.getElementById("infantilD");
-         //cuerpoC = documen.getElementById("infantilC");
-
-        //checkbox de tallas infantiles
-         //checkM = documen.getElementById("checkM");
-         //checkD = documen.getElementById("checkD");
-         //checkC = documen.getElementById("checkC");
-
-            //tallas de Meses
-         //if(checkM.checked){    cuerpoM.style.display='block';
-         //}else{ cuerpoM.style.display='none';   }
-
-            //tallas dobles
-         //if(checkD.checked){    cuerpoD.style.display='block';
-         //}else{ cuerpoD.style.display='none';   }
-
-            //tallas completas 
-         //if(checkC.checked){    cuerpoC.style.display='block';
-         //}else{ cuerpoC.style.display='none';   }
-
-    }</script>
-
-
-            <?php 
         }
     }
 ?>

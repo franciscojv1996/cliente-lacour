@@ -2,26 +2,23 @@
     class conte{
         public function Juvenil(){
             ?>
-                <div class="container"> <br>
+                <div class="container">
 
-                    <div class="row justify-content-between">
-                        <div class="col-md">
-                            <h3> Tallas de Juvenil </h3>
+                <h3 class="text-center"> Tallas Juveniles </h3>
+                    
+                    <div class="row justify-content-around"> 
+                        <div class="col-md-4" >
+                            <h4>Curva</h4> 
                         </div>
-
-                        <div class="col-md">
-                            <form>
-                                <div class="form-group row">        
-                                    <input type="number" class="form-control form-control-sm" id="piezasaJ" min="100" placeholder="Total de piezas a producir">
-                                </div>
-                            </form>
-                        </div>
+                        
+                        <div class="col-md-4">
+                            <input type="number" class="form-control form-control-sm" id="piezasaA" min="100" placeholder="Total de piezas a producir">
+                        </div>  
                     </div>
 
                         <form action="">
 
                             <div id="curvJu"> <!-- Curva  style="display:none;"-->
-                                <p class="text-left h4">Curva</p>
                                 <div class="form-row text-center">
 
                                     <div class="form-group col-md">
@@ -67,7 +64,7 @@
 
                             </div>
 
-                            <div id="CantidadJu"> <!-- Cantidad  style="display:none;"-->
+                            <div id="CantidadJu" style="display:none;"> <!-- Cantidad  style="display:none;"-->
                                 <p class="text-left h4">Cantidad</p>
                                 <div class="form-row text-center">
 

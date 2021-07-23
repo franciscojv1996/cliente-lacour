@@ -1,58 +1,56 @@
 //adulto
-    function adulto(){
-    elementA = document.getElementById("contentA");
-    checkA = document.getElementById("checka");
-        if (checkA.checked) {    
+
+   function adulto(){
+      elementA = document.getElementById("contentA");
+      checkA = document.getElementById("checka");
+         if (checkA.checked){    
             elementA.style.display='block';
-            } else {   
+         } else {   
             elementA.style.display='none'; 
-            }
-    } 
+         }
+   } 
 
 // juvenil
-    function juvenil(){
-        cuerpoJ = document.getElementById("contentJ");
-        checkJ = document.getElementById("checkj");
-            if(checkJ.checked){ cuerpoJ.style.display='block';
-            } else {    cuerpoJ.style.display='none';}
-    }
 
-//infantil
-    function infantil()
-    {
-        //div de tallas infantiles
-         cuerpoM = documen.getElementById("infantilM");
-         cuerpoD = documen.getElementById("infantilD");
-         cuerpoC = documen.getElementById("infantilC");
-
-        //checkbox de tallas infantiles
-         checkM = documen.getElementById("checkM");
-         checkD = documen.getElementById("checkD");
-         checkC = documen.getElementById("checkC");
-
-            //tallas de Meses
-         if(checkM.checked)
-         {
-            cuerpoM.style.display='block';
-         }else{
-            cuerpoM.style.display='none';
+   function juvenil(){
+     cuerpoJ = document.getElementById("contentJ");
+     checkJ = document.getElementById("checkj");
+         if(checkJ.checked){ 
+            cuerpoJ.style.display='block';
+         } else { 
+            cuerpoJ.style.display='none';
          }
+   }
 
-            //tallas dobles
-         if(checkD.checked)
-         {
-            cuerpoD.style.display='block';
+//Infantil
+
+   function meses(){
+      cuerpoIM = document.getElementById("cuerpoIM");
+      cheIM = document.getElementById("cheIM");
+      if (cheIM.checked) {
+         cuerpoIM.style.display="block";
+      }else{
+         cuerpoIM.style.display="none";
+      }
+   }
+
+   function doble(){
+      cuerpoID = document.getElementById("cuerpoID");
+      cheID = document.getElementById("cheID");
+      if (cheID.checked) {
+         cuerpoID.style.display="block";
+      }else{
+         cuerpoID.style.display="none";
+      }
+   }   
+
+   function completa(){
+      cuerpoIC = document.getElementById("cuerpoIC");
+      cheIC = document.getElementById("cheIC");      
+         if (cheIC.checked) {
+            cuerpoIC.style.display="block";
          }else{
-            cuerpoD.style.display='none';
+            cuerpoIC.style.display="none";
          }
-
-            //tallas completas 
-         if(checkC.checked)
-         {
-            cuerpoC.style.display='block';
-         }else{
-            cuerpoC.style.display='none';
-         }
-
-    }
+      }
 
