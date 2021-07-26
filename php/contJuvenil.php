@@ -13,7 +13,7 @@
                             </div>
                             
                             <div class="col-md-4">
-                                <input type="number" class="form-control form-control-sm" id="piezasaA" min="100" placeholder="Total de piezas a producir">
+                                <input type="number" class="form-control form-control-sm" id="piezasaJ" min="100" placeholder="Total de piezas a producir">
                             </div>  
                         </div>
 

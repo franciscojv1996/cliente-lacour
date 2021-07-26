@@ -1,30 +1,28 @@
+    function cantidad() {
 
-
-function cantidad() {
-
-    // tallas adultos
-        var totalAdulto = 0;
-            $(".Adulto").each(function(){
-                if (isNaN(parseInt($(this).val()))) 
-                {   totalAdulto += 0;   }
+        // tallas adultos
+            var totalAdulto = 0;
+                $(".Adulto").each(function(){
+                    if (isNaN(parseInt($(this).val()))) 
+                        {   totalAdulto += 0;   }
                     else 
-                {   totalAdulto += parseInt($(this).val());    }
-            });
+                        {   totalAdulto += parseInt($(this).val());    }
+                });
         console.log("total de pieazas a producir Adultos" + totalAdulto);
-
-    // tallas juveniles
-        var totalJuvenil = 0;
-            $(".Juvenil").each(function(){
-                if (isNaN(parseInt($(this).val()))) 
-                {   totalJuvenil += 0;   }
+    
+        // tallas juveniles
+            var totalJuvenil = 0;
+                $(".Juvenil").each(function(){
+                    if (isNaN(parseInt($(this).val()))) 
+                        {   totalJuvenil += 0;   }
                     else 
-                {   totalJuvenil += parseInt($(this).val());    }
-            });
+                        {   totalJuvenil += parseInt($(this).val());    }
+                });
         console.log("total de pieazas a producir Juvenil" + totalJuvenil);
-
-    // tallas infantiles
+    
+        // tallas infantiles
             
-        // tallas meses
+            // tallas meses
             var totalInfantileM = 0;
                 $(".InfantilM").each(function(){
                     if (isNaN(parseInt($(this).val()))) 
@@ -34,7 +32,7 @@ function cantidad() {
                 });
             console.log("total de pieazas a producir Infantiles Meses" + totalInfantileM);
         
-        // tallas dobles
+            // tallas dobles
             var totalInfantileD = 0;
             $(".InfantilD").each(function(){
                 if (isNaN(parseInt($(this).val()))) 
@@ -42,10 +40,10 @@ function cantidad() {
                     else 
                 {   totalInfantileD += parseInt($(this).val());    }
             });
-        console.log("total de pieazas a producir Infantiles Dobles" + totalInfantileD);
+            console.log("total de pieazas a producir Infantiles Dobles" + totalInfantileD);
         
         
-        // tallas completas
+            // tallas completas
             var totalInfantileC = 0;
                 $(".InfantilC").each(function(){
                     if (isNaN(parseInt($(this).val()))) 
@@ -55,4 +53,4 @@ function cantidad() {
                 });
             console.log("total de pieazas a producir Infantiles Completa" + totalInfantileC);
         
-}
+    }

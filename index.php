@@ -27,7 +27,7 @@
         <h4>Tallas</h4>
 
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="checka" onchange="javascript:adulto()">
+          <input class="form-check-input" type="checkbox" id="checka" onchange="javascript:adulto()" checked>
           <label class="form-check-label" for="inlineCheckbox1">Adulto</label>
         </div>
 
@@ -69,7 +69,7 @@
 
     <div class="container" style="background-color: #ccc">
       
-      <div class="col-lg-12" id="contentA" style="display: none;"><!--Adulto-->
+      <div class="col-lg-12" id="contentA"><!--Adulto-->
         <?php
           $c = new cont;
           $c-> Adulto();
@@ -94,9 +94,11 @@
         ?>
       </div>
 
-      <input type="button" value="cantidad" onclick="cantidad()" >
+      <div class="container" id="btnCantidad"  style="display: none;"> <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="cantidad" onclick="cantidad()"> <br>  </div>
 
-      <input type="button" value="curva">
+      <div class="container" id="btnCurva" > <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
+
+
     </div>
 
   
@@ -112,73 +114,15 @@
           x.style.display = 'none';
       }
     }
-
-    
-function cantidad() {
-
-// tallas adultos
-    var totalAdulto = 0;
-        $(".Adulto").each(function(){
-            if (isNaN(parseInt($(this).val()))) 
-            {   totalAdulto += 0;   }
-                else 
-            {   totalAdulto += parseInt($(this).val());    }
-        });
-    console.log("total de pieazas a producir Adultos" + totalAdulto);
-
-// tallas juveniles
-    var totalJuvenil = 0;
-        $(".Juvenil").each(function(){
-            if (isNaN(parseInt($(this).val()))) 
-            {   totalJuvenil += 0;   }
-                else 
-            {   totalJuvenil += parseInt($(this).val());    }
-        });
-    console.log("total de pieazas a producir Juvenil" + totalJuvenil);
-
-// tallas infantiles
-        
-    // tallas meses
-        var totalInfantileM = 0;
-            $(".InfantilM").each(function(){
-                if (isNaN(parseInt($(this).val()))) 
-                {   totalInfantileM += 0;   }
-                    else 
-                {   totalInfantileM += parseInt($(this).val());    }
-            });
-        console.log("total de pieazas a producir Infantiles Meses" + totalInfantileM);
-    
-    // tallas dobles
-        var totalInfantileD = 0;
-        $(".InfantilD").each(function(){
-            if (isNaN(parseInt($(this).val()))) 
-            {   totalInfantileD += 0;   }
-                else 
-            {   totalInfantileD += parseInt($(this).val());    }
-        });
-    console.log("total de pieazas a producir Infantiles Dobles" + totalInfantileD);
-    
-    
-    // tallas completas
-        var totalInfantileC = 0;
-            $(".InfantilC").each(function(){
-                if (isNaN(parseInt($(this).val()))) 
-                {   totalInfantileC += 0;   }
-                    else 
-                {   totalInfantileC += parseInt($(this).val());    }
-            });
-        console.log("total de pieazas a producir Infantiles Completa" + totalInfantileC);
-    
-}
-
   </script>
 
   <!-- Optional JavaScript -->
-  <script type="text/javascript" src="js\tabla.js"></script>
+    <script type="text/javascript" src="js\curva.js"></script>
+    <script type="text/javascript" src="js\tabla.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS-->
-  <script src="js\jquery-3.3.1.slim.min.js"></script>
-  <script src="js\popper.min.js"></script>
-  <script src="js\bootstrap.min.js"></script>
+    <script src="js\jquery-3.3.1.slim.min.js"></script>
+    <script src="js\popper.min.js"></script>
+    <script src="js\bootstrap.min.js"></script>
 
 </body>
 </html>
