@@ -15,6 +15,7 @@
     include "php/contJuvenil.php";
     include "php/contInfantil.php";
     include "php/modal.php";
+    include "php/texto.php";
       $a = new menu;
       $a -> navn();
   ?> <br>
@@ -83,11 +84,11 @@
         ?>
       </div>
 
-      <div class="container" id="cuerpoT" style=""> <!-- Titulo de tallas infantiles -->
-        <h2 class="text-center">Tallas Infantiles</h2> 
+      <div class="container"> <!-- Titulo de tallas infantiles -->
         <?php 
           $g = new conten;
-
+          
+          $g -> Texto();
           $g -> InfantilC();          
           $g -> InfantilD();
           $g -> InfantilM();
@@ -98,24 +99,13 @@
 
       <div class="container" id="btnCurva" > <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
 
-
-    </div>
-
+    </div> <br>
+  <?php 
+    $m = new aleta;
+    $m -> Mensaje();
+  ?>
   
-
-  <script>
-
-    window.addEventListener("load",tituloInfantil);
-    function tituloInfantil() {
-      var x = document.getElementById('cuerpoT');
-      if (x.style.display === 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-    }
-  </script>
-
+    
   <!-- Optional JavaScript -->
     <script type="text/javascript" src="js\curva.js"></script>
     <script type="text/javascript" src="js\tabla.js"></script>
