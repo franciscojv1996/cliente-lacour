@@ -1,0 +1,31 @@
+--------------------------Github-------------------------------------------------------------
+…or create a new repository on the command line
+echo "# open" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/franciscojv1996/open.git || https://github.com/franciscojv1996/cliente-lacour.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/franciscojv1996/open.git
+git branch -M main
+git push -u origin main
+
+------------------------Laravel-------------------------------------------------------------
+FACEBOOK_CLIENT_ID=545581366858598
+FACEBOOK_CLIENT_SECRET=7fd921527e798c09803919d5fa4472aa
+FACEBOOK_CLIENT_URL=http://localhost/open/proyecto2/public/login/facebook/calback
+
+GOOGLE_CLIENT_ID=382454301806-ek83bofnmjjg7t4iocall65al358apcu.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=6E3kSx8_nDKLh7GCCxY_4OLd
+GOOGLE_CLIENT_URL=http://localhost/open/proyecto2/public/login/google/calback
+----------------------------------------------------------------------------------------------
+estos comando deben de ser unsados en la consola de vs coder
+crear proyecto
+-laravel new proyect 
+composer require laravel/ui --dev
+php artisan ui bootstrap --auth
+npm install, npm run dev
+composer require laravel/socialite 

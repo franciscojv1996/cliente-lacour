@@ -371,5 +371,13 @@
             <?php
 
         }
+
+        public function Texto(){
+            ?>
+                <div class="container" id="cuerpoT" style="display: none;"> <!-- Titulo de tallas infantiles -->
+                    <h2 class="text-center">Tallas Infantiles</h2>
+                </div>
+            <?php
+        }
     }
 ?>

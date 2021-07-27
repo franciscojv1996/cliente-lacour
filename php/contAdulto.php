@@ -10,7 +10,8 @@
                     
                         <div class="row justify-content-around"> 
                             <div class="col-md-4" >
-                                <h4>Curva</h4> 
+                                <h4>Curva</h4>
+
                             </div>
                             
                             <div class="col-md-4">
@@ -69,7 +70,7 @@
 
                         <!-- mostrar resultado  -->
                         <div class="form-check form-check-inline" >
-                            <label class="form-check-label h4">Cantidad: <!-- <span id="sm"></span> --> </label>       
+                            <label class="form-check-label h4">Cantidad: <span id="cantidad"></span>  <!-- <span id="sm"></span> --> </label>       
                         </div>
 
                             <div class="form-row">

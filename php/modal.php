@@ -125,7 +125,7 @@
                         
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal" onclick="tituloInfantil()">Cerra ventana</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Cerra ventana</button>
                     </div>
                     </div>
                 </div>

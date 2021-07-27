@@ -27,30 +27,42 @@
    function meses(){
       cuerpoIM = document.getElementById("cuerpoIM");
       cheIM = document.getElementById("cheIM");
+      //texto cuerpo 
+         cuerpoT = document.getElementById("cuerpoT");
          if (cheIM.checked) {
             cuerpoIM.style.display="block";
+            cuerpoT.style.display="block"
          }else{
             cuerpoIM.style.display="none";
+            cuerpoT.style.display="none"
          }
    }
 
    function doble(){
       cuerpoID = document.getElementById("cuerpoID");
       cheID = document.getElementById("cheID");
+      //texto cuerpo 
+         cuerpoT = document.getElementById("cuerpoT");
          if (cheID.checked) {
             cuerpoID.style.display="block";
+            cuerpoT.style.display="block"
          }else{
             cuerpoID.style.display="none";
+            cuerpoT.style.display="none"
          }
    }   
 
    function completa(){
       cuerpoIC = document.getElementById("cuerpoIC");
-      cheIC = document.getElementById("cheIC");      
+      cheIC = document.getElementById("cheIC");
+      //texto cuerpo 
+         cuerpoT = document.getElementById("cuerpoT");      
          if (cheIC.checked) {
             cuerpoIC.style.display="block";
+            cuerpoT.style.display="block"
          }else{
             cuerpoIC.style.display="none";
+            cuerpoT.style.display="none"
          }
    }
 
