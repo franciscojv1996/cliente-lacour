@@ -5,7 +5,7 @@
                 <div class="container">
                     <h3 class="text-center"> Tallas Juveniles </h3>
                     
-                    <div id="curvJu"> <!-- Curva  style="display:none;"-->
+                    <div id="curvJu" style="display:none;"> <!-- Curva  style="display:none;"-->
                     
                         <div class="row justify-content-around"> 
                             <div class="col-md-4" >

@@ -5,7 +5,7 @@
                 <div class="container" >
                     <div id="cuerpoIM" style="display:none;">
                         
-                        <div id=curvaIM>
+                        <div id=curvaIM style="display:none;">
 
                             <div class="row justify-content-around"> 
                                 <div class="col-md-4" >
@@ -139,7 +139,7 @@
 
                     <div id="cuerpoID" style="display:none;">
 
-                        <div id="curvaID">
+                        <div id="curvaID" style="display:none;">
                     
                             <div class="row justify-content-around"> 
                                 <div class="col-md-4" >
@@ -260,7 +260,7 @@
                     
                     <div id="cuerpoIC" style="display:none;">
 
-                        <div id="curvaIC">
+                        <div id="curvaIC" style="display:none;">
                         
                             <div class="row justify-content-around"> 
                                 <div class="col-md-4" >

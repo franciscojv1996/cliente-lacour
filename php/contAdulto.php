@@ -6,7 +6,7 @@
                 <div class="container">
                     <h3 class="text-center"> Tallas de Adultos </h3>
 
-                    <div id="curvAd">  <!--Curvas style="display:none;"  -->
+                    <div id="curvAd" style="display:none;">  <!--Curvas style="display:none;"  -->
                     
                         <div class="row justify-content-around"> 
                             <div class="col-md-4" >

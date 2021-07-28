@@ -16,64 +16,24 @@
     include "php/contInfantil.php";
     include "php/modal.php";
     include "php/texto.php";
+      $h = new inicio;
+      $h ->Modal();
+
       $a = new menu;
       $a -> navn();
   ?> <br>
-  
-  <div class="container">
-    
-    <div class="row justify-content-around" style="background-color: #dd0">
 
-      <div class="col-lg-5 text-center" style="background-color: #ccc">
-        <h4>Tallas</h4>
-
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="checka" onchange="javascript:adulto()" checked>
-          <label class="form-check-label" for="inlineCheckbox1">Adulto</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="checkj" onchange="javascript:juvenil()">
-          <label class="form-check-label" for="inlineCheckbox2">Juvenil</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" data-toggle="modal" data-target="#exampleModal">
-          <label class="form-check-label" for="inlineCheckbox3">Infantil</label>
-            <?php 
-              $b = new modal;
-              $b -> Ventana();
-            ?>
-        </div>
-          
-      </div>
-
-    <div class="col-lg-5 text-center" style="background-color: #ccc">
-
-      <h4>Tipo de pedido</h4>
-        
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="opc" value="1" onchange="mostrar(this.value);" checked>
-          <label class="form-check-label" for="inlineRadio1">Curva</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="opc" value="2" onchange="mostrar(this.value);" >
-          <label class="form-check-label" for="inlineRadio2">Cantidad</label>
-        </div>
-
-      </div>
-      
-    </div>
-
-  </div> <br>
+    <?php
+      $d = new submenu;
+      $d -> selector();
+    ?><br>
 
     <div class="container" style="background-color: #ccc">
       
-      <div class="col-lg-12" id="contentA"><!--Adulto-->
+      <div class="col-lg-12" id="contentA" style="display: none;" ><!--Adulto-->
         <?php
-          $c = new cont;
-          $c-> Adulto();
+          $e = new cont;
+          $e-> Adulto();
         ?> 
       </div> 
 
@@ -95,16 +55,15 @@
         ?>
       </div>
 
-      <div class="container" id="btnCantidad"  style="display: none;"> <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="cantidad" onclick="cantidad()"> <br>  </div>
+      <div class="container" id="btnCantidad"  style="display: none;"> <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="cantidad" onclick="cantidad()" > <br>  </div>
 
-      <div class="container" id="btnCurva" > <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
+      <div class="container" id="btnCurva" style="display: none;"> <input type="button" class="btn btn-warning btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"disabled> <br> </div>
 
     </div> <br>
-  <?php 
-    $m = new aleta;
-    $m -> Mensaje();
-  ?>
-  
+      <?php 
+        $m = new aleta;
+        $m -> Mensaje();
+      ?>
     
   <!-- Optional JavaScript -->
     <script type="text/javascript" src="js\curva.js"></script>
@@ -113,6 +72,11 @@
     <script src="js\jquery-3.3.1.slim.min.js"></script>
     <script src="js\popper.min.js"></script>
     <script src="js\bootstrap.min.js"></script>
+    
+    <script>
+      $(document).ready(function()  {
+      $("#Modal").modal("show");  });
+    </script>
 
 </body>
 </html>

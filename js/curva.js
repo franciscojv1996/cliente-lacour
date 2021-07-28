@@ -5,10 +5,10 @@ function curva(){
     var u = 0, xs = 0, s = 0, m = 0, l = 0, xl = 0, xxl = 0, xl3 = 0, xl4 = 0;
   
     piezaA = document.getElementById("piezasaA").value;
-    console.log("total de piezas por el cliente: " +piezaA);
 
+    if (piezaA >= 100) {
 
-    if (piezaA > 0) {
+        console.log("total de piezas por el cliente: " +piezaA);
 
         $(".montoA").each(function() {
             if (isNaN(parseInt($(this).val()))) 
@@ -124,10 +124,25 @@ function curva(){
                 document.getElementById('TallaXL4').innerHTML = " "; 
         }
         
-    } else {
+    }
 
-        //generar una alerta
-        
+    if(adulto() == 1 && piezaA == 0){
+        alert(" Debes de agregar la cantidad de piezas a producir de talla adulto ");
+        document.getElementById("piezasaA").style.border = "solid";
+        var bordeAdulto = 10;
+    
+        if(bordeAdulto == 10){
+            document.getElementById("piezasaA").style.borderColor = "navy";
+        }else{
+            document.getElementById("piezasaA").style.borderColor = "white";
+        }
+    
+    }else{
+        document.getElementById("piezasaA").style.border = "none";
+    }
+    
+    if(piezaA < 100 && piezaA >= 1){
+        alert(" la cantidad de piezas a producir debe de se mayor a 100");
     }
 
     //TALLAS JUVENIL

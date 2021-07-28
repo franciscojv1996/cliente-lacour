@@ -19,7 +19,7 @@
                                 <h4 class="text-center">Seleccione el tipo de talla Infantil</h4>
 
                                 <div class="col-lg-12"  style="background-color:#ccc">
-                                    <input type="checkbox" id="cheIC" onchange="javascript:completa();"> <label for="">Opción #1</label>
+                                    <input type="checkbox" id="cheIC" value="3" onchange="javascript:completa();"> <label for="">Opción #1</label>
                                     
                                     <div class="form-row border border-dark rounded text-center">
                                         
@@ -60,7 +60,7 @@
                                 <br></div><br>
 
                                 <div class="col-lg-12"  style="background-color:#bbb">
-                                    <input type="checkbox" id="cheID" onchange="javascript:doble();"> <label for="">Opción #2</label>
+                                    <input type="checkbox" id="cheID" value="4" onchange="javascript:doble();"> <label for="">Opción #2</label>
                                     
                                     <div class="form-row border border-dark rounded text-center">
                                         
@@ -89,7 +89,7 @@
                                 </br></div> <br>
 
                                 <div class="col-lg-12"  style="background-color:#aaa">
-                                    <input type="checkbox" id="cheIM" onchange="javascript:meses();"> <label for="">Opción #3</label>            
+                                    <input type="checkbox" id="cheIM" value="5" onchange="javascript:meses();"> <label for="">Opción #3</label>            
             
                                     <div class="form-row border border-dark rounded text-center">
                                         
@@ -135,3 +135,41 @@
         }
     }
 ?>
+
+<?php 
+    class inicio{
+        public function Modal(){
+
+            ?>
+
+                <div class="modal fade" id="Modal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <div class="container">
+    
+                                    <?php
+                                        $d = new submenu;
+                                        $d -> selector();
+                                    ?>
+      
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php 
+
+        }
+    }
+?>
+    
