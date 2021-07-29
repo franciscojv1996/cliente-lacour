@@ -82,6 +82,16 @@
 
                         </div>
 
+                        <div class="container">   
+                            <div class="row justify-content-end">
+                                
+                                <div class="col-3" >
+                                    <p class="h4"> Total:  <span class="sm h3" id="juvenilC" ></span> </p>
+                                </div>
+
+                            </div>
+                        </div> <br>
+
                     </div>
 
                 </div>

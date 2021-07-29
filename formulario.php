@@ -27,7 +27,7 @@
           <h4>Tallas</h4>
 
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="1" id="checka" onchange="javascript:adulto()">
+            <input class="form-check-input" type="checkbox" value="1" id="checka" onchange="javascript:adulto()" checked>
             <label class="form-check-label" for="inlineCheckbox1">Adulto</label>
           </div>
 
@@ -50,7 +50,7 @@
           <h4>Tipo de pedido</h4>
           
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="opc" value="1" onchange="mostrar(this.value);">
+            <input class="form-check-input" type="radio" name="opc" value="1" onchange="mostrar(this.value);" checked>
             <label class="form-check-label" for="inlineRadio1">Curva</label>
           </div>
 
@@ -60,11 +60,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> <br> 
 
-    <div class="container" style="background-color: #ccc">
+    <div class="container" style="background-color: #ccc"> <br> 
       
-      <div class="col-lg-12" id="contentA" style="display: none;" ><!--Adulto-->
+      <div class="col-lg-12" id="contentA" ><!--Adulto  style="display: none;"-->
         <?php
           $e = new cont;
           $e-> Adulto();
@@ -89,9 +89,9 @@
         ?>
       </div>
 
-      <div class="container" id="btnCantidad"  style="display: none;"> <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="cantidad" onclick="cantidad()" > <br>  </div>
+      <div class="container" id="btnCantidad" style="display: none;" > <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="cantidad" onclick="cantidad()" > <br>  </div>
 
-      <div class="container" id="btnCurva" style="display: none;"> <input type="button" class="btn btn-warning btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
+      <div class="container" id="btnCurva" > <input type="button" class="btn btn-warning btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
 
     </div> <br>
       <?php 
@@ -101,6 +101,7 @@
     
   <!-- Optional JavaScript -->
     <script type="text/javascript" src="js\curva.js"></script>
+    <script type="text/javascript" src="js\cantidad.js"></script>
     <script type="text/javascript" src="js\tabla.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS-->
     <script src="js\jquery-3.3.1.slim.min.js"></script>
