@@ -136,7 +136,8 @@
     }
 ?>
 
-<?php 
+<?php
+/* 
     class inicio{
         public function Modal(){
 
@@ -156,10 +157,11 @@
 
                                 <div class="container">
     
-                                    <?php
-                                        $d = new submenu;
-                                        $d -> selector();
-                                    ?>
+                                <script>
+      $(document).ready(function()  {
+      $("#Modal").modal("show");  });
+    </script>
+
       
                                 </div>
 
@@ -170,6 +172,6 @@
             <?php 
 
         }
-    }
+    }*/
 ?>
     

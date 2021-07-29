@@ -1,5 +1,3 @@
-var adultos = 0;
-
    //adulto
    function adulto(){
       elementA = document.getElementById("contentA");
