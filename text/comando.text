@@ -9,7 +9,7 @@ git remote add origin https://github.com/franciscojv1996/open.git ||  https://gi
 git push -u origin main
 
 …or push an existing repository from the command line
-git remote add origin https://github.com/franciscojv1996/open.git
+git remote add origin https://github.com/franciscojv1996/cliente-lacour.git || https://github.com/franciscojv1996/open.git
 git branch -M main
 git push -u origin main
 

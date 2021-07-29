@@ -3,7 +3,8 @@ function curva(){
    
     var totalA = 0, panoA = 0, sumaA = 0, piezaA;
     var u = 0, xs = 0, s = 0, m = 0, l = 0, xl = 0, xxl = 0, xl3 = 0, xl4 = 0;
-  
+    var resU = 0, resXS = 0, resS = 0, resM = 0, resXL=0, resXXL = 0 , resXL3 = 0, resXL4 = 0;
+
     piezaA = document.getElementById("piezasaA").value;
 
     if (piezaA >= 100) {
@@ -44,37 +45,37 @@ function curva(){
         console.log("tallas 4XL: " + xl4);
 
         if (u > 0) {
-            var resU = 0;
                 resU = parseFloat(panoA) * parseFloat(u);
                 console.log("Piezas a producir: "+ resU);
+                sumaA = parseFloat(sumaA) + parseFloat(resU);
                 document.getElementById('TallaU').innerHTML = Math.round(resU);
             } else {
             document.getElementById('TallaU').innerHTML = " "; 
         }
     
         if (xs > 0) {
-            var resXS = 0;
             resXS = parseFloat(panoA) * parseFloat(xs);
             console.log("Piezas a producir: "+ resXS);
+            sumaA = parseFloat(sumaA) + parseFloat(resXS);
             document.getElementById('TallaXS').innerHTML = Math.round(resXS);
             } else {
             document.getElementById('TallaXS').innerHTML = " "; 
         }
 
         if (s > 0) {
-            var resS = 0;
                 resS = parseFloat(panoA) * parseFloat(s);
                 console.log("Piezas a producir: "+ resS);
                 document.getElementById('TallaS').innerHTML = Math.round(resS);
+                sumaA = parseFloat(sumaA) + parseFloat(resS);
             } else {
                 document.getElementById('TallaS').innerHTML = " "; 
         }
 
         if (m > 0) {
-            var resM = 0;
                 resM = parseFloat(panoA) * parseFloat(m);
                 console.log("Piezas a producir: "+ resM);
                 document.getElementById('TallaM').innerHTML = Math.round(resM);
+                sumaA = parseFloat(sumaA) + parseFloat(resM);
             } else {
                 document.getElementById('TallaM').innerHTML = " "; 
         }
@@ -83,46 +84,53 @@ function curva(){
             var resL = 0;
                 resL = parseFloat(panoA) * parseFloat(l);
                 console.log("Piezas a producir: "+ resL);
+                sumaA = parseFloat(sumaA) + parseFloat(resL);
                 document.getElementById('TallaL').innerHTML = Math.round(resL);
             } else {
             document.getElementById('TallaL').innerHTML = " "; 
         }
 
         if (xl > 0) {
-            var resXL = 0;
                 resXL = parseFloat(panoA) * parseFloat(xl);
                 console.log("Piezas a producir: "+ resXL);
+                sumaA = parseFloat(sumaA) + parseFloat(resXL);
                 document.getElementById('TallaXL').innerHTML = Math.round(resXL);
             } else {
                 document.getElementById('TallaXL').innerHTML = " "; 
         }
 
         if (xxl > 0) {
-            var resXXL = 0;
                 resXXL = parseFloat(panoA) * parseFloat(xxl);
                 console.log("Piezas a producir: "+ resXXL);
+                sumaA = parseFloat(sumaA) + parseFloat(resXXL);
                 document.getElementById('TallaXXL').innerHTML = Math.round(resXXL);
             } else {
                 document.getElementById('TallaXXL').innerHTML = " "; 
         }
 
         if (xl3 > 0) {
-            var resXL3 = 0;
                 resXL3 = parseFloat(panoA) * parseFloat(xl3);
                 console.log("Piezas a producir: "+ resXL3);
+                sumaA = parseFloat(sumaA) + parseFloat(resXL3);
                 document.getElementById('TallaXL3').innerHTML = Math.round(resXL3);
             } else {
             document.getElementById('TallaXL3').innerHTML = " "; 
         }
 
         if (xl4 > 0) {
-            var resXL4 = 0;
                 resXL4 = parseFloat(panoA) * parseFloat(xl4);
                 console.log("Piezas a producir: "+ resXL4);
+                sumaA = parseFloat(sumaA) + parseFloat(resXL4);
                 document.getElementById('TallaXL4').innerHTML = Math.round(resXL4);
             } else {
                 document.getElementById('TallaXL4').innerHTML = " "; 
         }
+
+        var adultosuma=0;
+        adultosuma = parseInt(resU) + parseInt(resXS) + parseInt(resS) + parseInt(resM) + parseInt(resL) + parseInt(resXL) + parseInt(resXXL) + parseInt(resXL3) + parseInt(resXL4);
+        
+
+        console.log("total de piezas "+sumaA+ "   total de piezas "+adultosuma );
         
     }
 
@@ -446,9 +454,10 @@ function curva(){
         var t2 = 0, t4 = 0, t6 = 0, t8 = 0, t10 = 0;
 
         piezaIC = document.getElementById("piezasaIC").value;
-        console.log("total de piezas por el cliente: " +piezaIC);
 
         if (piezaIC > 0) {
+
+            console.log("total de piezas por el cliente: " +piezaIC);
 
             $(".montoIC").each(function() {
                 if (isNaN(parseInt($(this).val()))) 
