@@ -131,7 +131,7 @@ function curva(){
         console.log("total de piezas "+sumaA+ "   total de piezas "+adultosuma );
         document.getElementById('CcantidaA').innerHTML = sumaA;
 
-        window.location.href= "../php/dbtalla.php?piezaA="+ piezaA;
+        window.location.href= "php/dbtalla.php?piezaA="+ piezaA;
         
         
     }
