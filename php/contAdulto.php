@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="col-3">
-                                <label class="form-check-label h4" >Total: <p class="sm" id="CcantidaA"> </p> </label>
+                                <label class="form-check-label h4" >Total: <p class="sm" id="CcantidaA" name="CcantidaA"> </p> </label>
                             </div>  
                         </div>
 

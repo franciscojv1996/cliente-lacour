@@ -130,6 +130,9 @@ function curva(){
 
         console.log("total de piezas "+sumaA+ "   total de piezas "+adultosuma );
         document.getElementById('CcantidaA').innerHTML = sumaA;
+
+        window.location.href= "../php/dbtalla.php?piezaA="+ piezaA;
+        
         
     }
 
@@ -567,5 +570,7 @@ function curva(){
         if(piezaIC < 100 && piezaIC >= 1){
             alert(" la cantidad de piezas a producir debe de se mayor a 100");
         }
+
+       
 
 }
