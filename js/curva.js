@@ -45,36 +45,36 @@ function curva(){
         console.log("tallas 4XL: " + xl4);
 
         if (u > 0) {
-                resU = parseFloat(panoA) * parseFloat(u);
+                resU = parseInt(panoA) * parseInt(u);
                 console.log("Piezas a producir: "+ resU);
                 sumaA = parseFloat(sumaA) + parseFloat(resU);
-                document.getElementById('TallaU').innerHTML = Math.round(resU);
+                document.getElementById('TallaU').innerHTML = resU;
             } else {
             document.getElementById('TallaU').innerHTML = " "; 
         }
     
         if (xs > 0) {
-            resXS = parseFloat(panoA) * parseFloat(xs);
+            resXS = parseInt(panoA) * parseInt(xs);
             console.log("Piezas a producir: "+ resXS);
             sumaA = parseFloat(sumaA) + parseFloat(resXS);
-            document.getElementById('TallaXS').innerHTML = Math.round(resXS);
+            document.getElementById('TallaXS').innerHTML = resXS;
             } else {
             document.getElementById('TallaXS').innerHTML = " "; 
         }
 
         if (s > 0) {
-                resS = parseFloat(panoA) * parseFloat(s);
+                resS = parseInt(panoA) * parseInt(s);
                 console.log("Piezas a producir: "+ resS);
-                document.getElementById('TallaS').innerHTML = Math.round(resS);
+                document.getElementById('TallaS').innerHTML = resS;
                 sumaA = parseFloat(sumaA) + parseFloat(resS);
             } else {
                 document.getElementById('TallaS').innerHTML = " "; 
         }
 
         if (m > 0) {
-                resM = parseFloat(panoA) * parseFloat(m);
+                resM = parseInt(panoA) * parseInt(m);
                 console.log("Piezas a producir: "+ resM);
-                document.getElementById('TallaM').innerHTML = Math.round(resM);
+                document.getElementById('TallaM').innerHTML = resM;
                 sumaA = parseFloat(sumaA) + parseFloat(resM);
             } else {
                 document.getElementById('TallaM').innerHTML = " "; 
@@ -82,43 +82,43 @@ function curva(){
 
         if (l > 0) {
             var resL = 0;
-                resL = parseFloat(panoA) * parseFloat(l);
+                resL = parseInt(panoA) * parseInt(l);
                 console.log("Piezas a producir: "+ resL);
                 sumaA = parseFloat(sumaA) + parseFloat(resL);
-                document.getElementById('TallaL').innerHTML = Math.round(resL);
+                document.getElementById('TallaL').innerHTML = resL;
             } else {
             document.getElementById('TallaL').innerHTML = " "; 
         }
 
         if (xl > 0) {
-                resXL = parseFloat(panoA) * parseFloat(xl);
+                resXL = parseInt(panoA) * parseInt(xl);
                 console.log("Piezas a producir: "+ resXL);
                 sumaA = parseFloat(sumaA) + parseFloat(resXL);
-                document.getElementById('TallaXL').innerHTML = Math.round(resXL);
+                document.getElementById('TallaXL').innerHTML = resXL;
             } else {
                 document.getElementById('TallaXL').innerHTML = " "; 
         }
 
         if (xxl > 0) {
-                resXXL = parseFloat(panoA) * parseFloat(xxl);
+                resXXL = parseInt(panoA) * parseInt(xxl);
                 console.log("Piezas a producir: "+ resXXL);
                 sumaA = parseFloat(sumaA) + parseFloat(resXXL);
-                document.getElementById('TallaXXL').innerHTML = Math.round(resXXL);
+                document.getElementById('TallaXXL').innerHTML = resXXL;
             } else {
                 document.getElementById('TallaXXL').innerHTML = " "; 
         }
 
         if (xl3 > 0) {
-                resXL3 = parseFloat(panoA) * parseFloat(xl3);
+                resXL3 = parseInt(panoA) * parseInt(xl3);
                 console.log("Piezas a producir: "+ resXL3);
                 sumaA = parseFloat(sumaA) + parseFloat(resXL3);
-                document.getElementById('TallaXL3').innerHTML = Math.round(resXL3);
+                document.getElementById('TallaXL3').innerHTML = resXL3;
             } else {
             document.getElementById('TallaXL3').innerHTML = " "; 
         }
 
         if (xl4 > 0) {
-                resXL4 = parseFloat(panoA) * parseFloat(xl4);
+                resXL4 = parseInt(panoA) * parseInt(xl4);
                 console.log("Piezas a producir: "+ resXL4);
                 sumaA = parseFloat(sumaA) + parseFloat(resXL4);
                 document.getElementById('TallaXL4').innerHTML = Math.round(resXL4);
@@ -126,8 +126,7 @@ function curva(){
                 document.getElementById('TallaXL4').innerHTML = " "; 
         }
 
-        var adultosuma=0;
-        adultosuma = parseInt(resU) + parseInt(resXS) + parseInt(resS) + parseInt(resM) + parseInt(resL) + parseInt(resXL) + parseInt(resXXL) + parseInt(resXL3) + parseInt(resXL4);
+        var adultosuma = parseInt(resU) + parseInt(resXS) + parseInt(resS) + parseInt(resM) + parseInt(resL) + parseInt(resXL) + parseInt(resXXL) + parseInt(resXL3) + parseInt(resXL4);
         
 
         console.log("total de piezas "+sumaA+ "   total de piezas "+adultosuma );
@@ -186,7 +185,7 @@ function curva(){
 
         if (t12 > 0) {
             var resT12 = 0;
-                resT12 = parseFloat(panoJ) * parseFloat(t12);
+                resT12 = parseInt(panoJ) * parseInt(t12);
                 console.log("Piezas a producir: "+ resT12);
                 document.getElementById('Talla12').innerHTML = Math.round(resT12);
             } else {
@@ -195,7 +194,7 @@ function curva(){
 
         if (t14 > 0) {
             var resT14 = 0;
-                resT14 = parseFloat(panoJ) * parseFloat(t14);
+                resT14 = parseInt(panoJ) * parseInt(t14);
                 console.log("Piezas a producir: "+ resT14);
                 document.getElementById('Talla14').innerHTML = Math.round(resT14);
             } else {
@@ -204,7 +203,7 @@ function curva(){
 
         if (t16 > 0) {
             var resT14 = 0;
-                resT14 = parseFloat(panoJ) * parseFloat(t16);
+                resT14 = parseInt(panoJ) * parseInt(t16);
                 console.log("Piezas a producir: "+ resT14);
                 document.getElementById('Talla16').innerHTML = Math.round(resT14);
             } else {
@@ -549,6 +548,12 @@ function curva(){
         if(piezaIC < 100 && piezaIC >= 1){
             alert(" la cantidad de piezas a producir debe de se mayor a 100");
         }
+
+    function mostrar(){
+
+        
+
+    }
 
 
 

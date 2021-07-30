@@ -21,9 +21,9 @@
       $a -> navn();
   ?> <br>
 
-    <div class="container">
-      <div class="row justify-content-around" style="background-color: #dd0">
-        <div class="col-lg-5 text-center" style="background-color: #ccc">
+    <div class="container" style="background-color: #ccc">
+      <div class="row justify-content-around">
+        <div class="col-lg-5 text-center" >
           <h4>Tallas</h4>
 
           <div class="form-check form-check-inline">
@@ -59,12 +59,10 @@
             <label class="form-check-label" for="inlineRadio2">Cantidad</label>
           </div>
         </div>
-      </div>
-    </div> <br> 
-
-    <div class="container" style="background-color: #ccc"> <br> 
+      </div> <br> <br>
+    
       
-      <div class="col-lg-12" id="contentA" ><!--Adulto  style="display: none;"-->
+      <div class="col-lg-12" id="contentA"><!--Adulto  style="display: none;"-->
         <?php
           $e = new cont;
           $e-> Adulto();
@@ -93,12 +91,7 @@
 
       <div class="container" id="btnCurva" > <input type="button" class="btn btn-warning btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
 
-    </div> <br>
-      <?php 
-        $m = new aleta;
-        $m -> Mensaje();
-      ?>
-    
+    </div>
   <!-- Optional JavaScript -->
     <script type="text/javascript" src="js\curva.js"></script>
     <script type="text/javascript" src="js\cantidad.js"></script>

@@ -1,12 +1,12 @@
    //adulto
    function adulto(){
-      elementA = document.getElementById("contentA");
+      cuerpoA = document.getElementById("contentA");
       checkA = document.getElementById("checka");
          if (checkA.checked){    
-            elementA.style.display='block';
+            cuerpoA.style.display='block';
             return 1;
          } else {   
-            elementA.style.display='none'; 
+            cuerpoA.style.display='none'; 
          }
    } 
 
