@@ -15,7 +15,7 @@
                             </div>
                             
                             <div class="col-md-4">
-                                <input type="number" class="form-control form-control-sm" id="piezasaA" min="100" placeholder="Total de piezas a producir">
+                                <input type="number" class="form-control form-control-sm" id="piezasaA" min="100" name="piezasaA" placeholder="Total de piezas a producir">
                             </div>  
                         </div>
                     
@@ -23,47 +23,47 @@
                             
                                 <div class="form-group col-md">
                                     <label class="">Unica</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="u" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="u" name="u" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label class="">XS</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xs" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xs" name="xs " placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label class="">S</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="s" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="s" name="s" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label class="">M</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="m" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="m" name="m" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label class="">L</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="l" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="l" mane="l" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label class="">XL</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xl" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xl" mane="xl" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label class="">XXL</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xxl" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xxl" name="xxl" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label class="">3XL</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xl3" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xl3" name="xl3" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label class="">4XL</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xl4" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xl4" name="xl4" placeholder="">
                                 </div>
 
                             </div>
@@ -75,46 +75,46 @@
                             </div>
 
                             <div class="col-3">
-                                <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaA"> </label>
+                                <label class="form-check-label h4" >Total: <p class="sm" id="CcantidaA"> </p> </label>
                             </div>  
                         </div>
 
                             <div class="form-row">
                         
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaU"></span> </p>
+                                    <p class="text-center h3"> <p class="sm" id="TallaU"></p> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaXS"></span> </p>
+                                    <p class="text-center h3"> <p class="sm" id="TallaXS"></p> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaS"></span> </p>
+                                    <p class="text-center h3"> <p class="sm" id="TallaS"></p> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaM" ></span> </p>
+                                    <p class="text-center h3"> <p class="sm" id="TallaM"></p> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaL" ></span> </p>
+                                    <p class="text-center h3"> <p class="sm" id="TallaL"></p> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaXL"></span> </p>
+                                    <p class="text-center h3"> <p class="sm" id="TallaXL"></p> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaXXL"></span> </p>
+                                    <p class="text-center h3"> <p class="sm" id="TallaXXL"></p> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaXL3"></span> </p>
+                                    <p class="text-center h3"> <p class="sm" id="TallaXL3"></p> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaXL4"></span> </p>
+                                    <p class="text-center h3"> <p class="sm" id="TallaXL4"></p> </p>
                                 </div>
 
                             </div>
@@ -128,47 +128,47 @@
                             
                             <div class="form-group col-md">
                                 <label class="">Unica</label>
-                                <input type="number" min="1" class="Adulto form-control form-control-sm" placeholder="">
+                                <input type="number" min="1" class="Adulto form-control form-control-sm" name="CU" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">XS</label>
-                                <input type="number" min="1" class="Adulto form-control form-control-sm" placeholder="">
+                                <input type="number" min="1" class="Adulto form-control form-control-sm" name="CXS" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">S</label>
-                                <input type="number" min="1" class="Adulto form-control form-control-sm" placeholder="">
+                                <input type="number" min="1" class="Adulto form-control form-control-sm" name="CS" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">M</label>
-                                <input type="number" min="1" class="Adulto form-control form-control-sm" placeholder="">
+                                <input type="number" min="1" class="Adulto form-control form-control-sm" name="CM" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">L</label>
-                                <input type="number" min="1" class="Adulto form-control form-control-sm" placeholder="">
+                                <input type="number" min="1" class="Adulto form-control form-control-sm" name="CL" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">XL</label>
-                                <input type="number" min="1" class="Adulto form-control form-control-sm" placeholder="">
+                                <input type="number" min="1" class="Adulto form-control form-control-sm" name="CXL" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">XXL</label>
-                                <input type="number" min="1" class="Adulto form-control form-control-sm" placeholder="">
+                                <input type="number" min="1" class="Adulto form-control form-control-sm" name="CXXL" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">3XL</label>
-                                <input type="number" min="1" class="Adulto form-control form-control-sm" placeholder="">
+                                <input type="number" min="1" class="Adulto form-control form-control-sm" name="C3XL" placeholder="">
                             </div>
 
                             <div class="form-group col-md">
                                 <label class="">4XL</label>
-                                <input type="number" min="1" class="Adulto form-control form-control-sm" placeholder="">
+                                <input type="number" min="1" class="Adulto form-control form-control-sm" name="C4XL" placeholder="">
                             </div>
 
                         </div>
@@ -177,8 +177,8 @@
                             <div class="row justify-content-end">
                                 
                                 <div class="col-3" >
-                                    <p class="h4"> Total:  <span class="sm h3" id="adultoC" ></span> </p>
-                                </div>
+                                    <p class="h4"> Total:  <p class="sm h3" id="adultoC"> </p> </p>
+                                </div>  
 
                             </div>
                         </div> <br>

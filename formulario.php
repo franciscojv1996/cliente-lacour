@@ -61,35 +61,36 @@
         </div>
       </div> <br>
     
-      
-      <div class="col-lg-12" id="contentA"><!--Adulto  style="display: none;"-->
-        <?php
-          $e = new cont;
-          $e-> Adulto();
-        ?> 
-      </div> 
+      <form action="" method="post">
+        <div class="col-lg-12" id="contentA"><!--Adulto  style="display: none;"-->
+          <?php
+            $e = new cont;
+            $e-> Adulto();
+          ?> 
+        </div> 
 
-      <div class="col-lg-12" id="contentJ" style="display: none;"> <!--Juvenil-->
-        <?php
-          $c = new conte;
-          $c -> Juvenil(); 
-        ?>
-      </div>
+        <div class="col-lg-12" id="contentJ" style="display: none;"> <!--Juvenil-->
+          <?php
+            $c = new conte;
+            $c -> Juvenil(); 
+          ?>
+        </div>
 
-      <div class="container"> <!-- Titulo de tallas infantiles -->
-        <?php 
-          $g = new conten;
-          
-          $g -> Texto();
-          $g -> InfantilC();          
-          $g -> InfantilD();
-          $g -> InfantilM();
-        ?>
-      </div>
+        <div class="container"> <!-- Titulo de tallas infantiles -->
+          <?php 
+            $g = new conten;
+            
+            $g -> Texto();
+            $g -> InfantilC();          
+            $g -> InfantilD();
+            $g -> InfantilM();
+          ?>
+        </div>
 
-      <div class="container" id="btnCantidad" style="display: none;" > <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="cantidad" onclick="cantidad()" > <br>  </div>
+        <div class="container" id="btnCantidad" style="display: none;" > <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="cantidad" onclick="cantidad()" > <br>  </div>
 
-      <div class="container" id="btnCurva" > <input type="button" class="btn btn-warning btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
+        <div class="container" id="btnCurva" > <input type="button" class="btn btn-warning btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
+      </form>
 
     </div>
   <!-- Optional JavaScript -->
