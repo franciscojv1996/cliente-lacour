@@ -69,8 +69,14 @@
                             </div>
 
                         <!-- mostrar resultado  -->
-                        <div class="form-check form-check-inline" >
-                            <label class="form-check-label h4">Cantidad: <span id="cantidad"></span>  <!-- <span id="sm"></span> --> </label>       
+                        <div class="row justify-content-around">
+                            <div class="col-3">
+                                <label class="form-check-label h4">Cantidad</label>
+                            </div>
+
+                            <div class="col-3">
+                                <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaA"> </label>
+                            </div>  
                         </div>
 
                             <div class="form-row">

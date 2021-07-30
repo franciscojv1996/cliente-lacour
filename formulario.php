@@ -59,7 +59,7 @@
             <label class="form-check-label" for="inlineRadio2">Cantidad</label>
           </div>
         </div>
-      </div> <br> <br>
+      </div> <br>
     
       
       <div class="col-lg-12" id="contentA"><!--Adulto  style="display: none;"-->

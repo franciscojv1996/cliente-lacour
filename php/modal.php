@@ -28,23 +28,11 @@
                                         </div>
 
                                         <div class="form-group col-sm">
-                                            <label class="">3</label>
-                                        </div>
-
-                                        <div class="form-group col-sm">
                                             <label class="">4</label>
                                         </div>
 
                                         <div class="form-group col-sm">
-                                        <label class="">5</label>
-                                        </div>
-
-                                        <div class="form-group col-sm">
                                             <label class="">6</label>
-                                        </div>
-
-                                        <div class="form-group col-sm">
-                                            <label class="">7</label>
                                         </div>
 
                                         <div class="form-group col-sm">

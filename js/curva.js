@@ -3,7 +3,7 @@ function curva(){
    
     var totalA = 0, panoA = 0, sumaA = 0, piezaA;
     var u = 0, xs = 0, s = 0, m = 0, l = 0, xl = 0, xxl = 0, xl3 = 0, xl4 = 0;
-    var resU = 0, resXS = 0, resS = 0, resM = 0, resXL=0, resXXL = 0 , resXL3 = 0, resXL4 = 0;
+    var resU = 0, resXS = 0, resS = 0, resM = 0, resL=0, resXL=0, resXXL = 0 , resXL3 = 0, resXL4 = 0;
 
     piezaA = document.getElementById("piezasaA").value;
 
@@ -21,7 +21,7 @@ function curva(){
         console.log("total de curvas de Adulto: " +totalA);
 
         panoA = parseFloat(piezaA) / parseFloat(totalA);
-        console.log("resultado a multiplicar adulto: " +panoA);
+        console.log("resultado a multiplicar adulto: " +Math.round(panoA));
 
             u = document.getElementById("u").value;
             xs = document.getElementById("xs").value;
@@ -81,7 +81,6 @@ function curva(){
         }
 
         if (l > 0) {
-            var resL = 0;
                 resL = parseInt(panoA) * parseInt(l);
                 console.log("Piezas a producir: "+ resL);
                 sumaA = parseFloat(sumaA) + parseFloat(resL);
@@ -130,6 +129,7 @@ function curva(){
         
 
         console.log("total de piezas "+sumaA+ "   total de piezas "+adultosuma );
+        document.getElementById('CcantidaA').innerHTML = sumaA;
         
     }
 
@@ -156,6 +156,7 @@ function curva(){
 
     var totalJ = 0, panoJ = 0, sumaJ = 0, piezaJ;
     var t12 = 0, t14 = 0, t16 = 0;
+    var resT12 = 0, resT14 = 0,  resT16 = 0;
 
     piezaJ = document.getElementById("piezasaJ").value;
 
@@ -172,7 +173,7 @@ function curva(){
         console.log("total de curvas de Adulto: " +totalJ);
 
         panoJ = parseFloat(piezaJ) / parseFloat(totalJ);
-        console.log("resultado a multiplicar adulto: " +panoJ);
+        console.log("resultado a multiplicar adulto: " +Math.round(panoJ));
 
         var t12 = document.getElementById('t12').value;
         var t14 = document.getElementById('t14').value;
@@ -184,31 +185,35 @@ function curva(){
         console.log("tallas T16: " + t16);
 
         if (t12 > 0) {
-            var resT12 = 0;
                 resT12 = parseInt(panoJ) * parseInt(t12);
                 console.log("Piezas a producir: "+ resT12);
+                sumaJ = parseInt(sumaJ) + parseInt(resT12);
                 document.getElementById('Talla12').innerHTML = Math.round(resT12);
             } else {
                document.getElementById('Talla12').innerHTML = " "; 
         }
 
         if (t14 > 0) {
-            var resT14 = 0;
                 resT14 = parseInt(panoJ) * parseInt(t14);
                 console.log("Piezas a producir: "+ resT14);
+                sumaJ = parseInt(sumaJ) + parseInt(resT14);
                 document.getElementById('Talla14').innerHTML = Math.round(resT14);
             } else {
                 document.getElementById('Talla14').innerHTML = " "; 
         }
 
         if (t16 > 0) {
-            var resT14 = 0;
-                resT14 = parseInt(panoJ) * parseInt(t16);
-                console.log("Piezas a producir: "+ resT14);
-                document.getElementById('Talla16').innerHTML = Math.round(resT14);
+                resT16 = parseInt(panoJ) * parseInt(t16);
+                console.log("Piezas a producir: "+ resT16);
+                sumaJ = parseInt(sumaJ) + parseInt(resT16);
+                document.getElementById('Talla16').innerHTML = Math.round(resT16);
             } else {
                 document.getElementById('Talla16').innerHTML = " "; 
         }
+
+        var juvenilsuma= parseInt(resT12) + parseInt(resT14) + parseInt(resT16);
+        console.log("total de piezas "+sumaJ+ "   total de piezas "+juvenilsuma );
+        document.getElementById('CcantidaJ').innerHTML = sumaJ;
         
     }
 
@@ -238,6 +243,7 @@ function curva(){
         // TALLAS DE MESES
         var totalIM = 0, panoIM = 0, sumaIM = 0, piezaIM;
         var m3 = 0, m6 = 0, m9 = 0, m12 = 0, m18= 0, m24 = 0;
+        var resM3 = 0, resM6 = 0, resM9 = 0, resM12 = 0, resM18 = 0, resM24 = 0;
 
         piezaIM = document.getElementById("piezasaIM").value;
             
@@ -254,7 +260,7 @@ function curva(){
             console.log("total de curvas de Infantil Meses: " +totalIM);
 
             panoIM = parseFloat(piezaIM) / parseFloat(totalIM);
-            console.log("resultado a multiplicar adulto: " +panoIM);
+            console.log("resultado a multiplicar adulto: " + Math.round(panoIM));
 
             var m3 = document.getElementById('m3').value;
             var m6 = document.getElementById('m6').value;
@@ -272,58 +278,62 @@ function curva(){
             console.log("tallas M24: " + m24);
 
             if (m3 > 0) {
-                var resM3 = 0;
-                    resM3 = parseFloat(panoIM) * parseFloat(m3);
+                    resM3 = parseInt(panoIM) * parseInt(m3);
                     console.log("Piezas a producir: "+ resM3);
+                    sumaIM = parseInt(sumaIM) + parseInt(resM3);
                     document.getElementById('Talla3M').innerHTML = Math.round(resM3);
                 } else {
                     document.getElementById('Talla3M').innerHTML = " "; 
             }
 
             if (m6 > 0) {
-                var resM6 = 0;
-                    resM6 = parseFloat(panoIM) * parseFloat(m6);
+                    resM6 = parseInt(panoIM) * parseInt(m6);
                     console.log("Piezas a producir: "+ resM6);
+                    sumaIM = parseInt(sumaIM) + parseInt(resM6);
                     document.getElementById('Talla6M').innerHTML = Math.round(resM6);
                 } else {
                     document.getElementById('Talla6M').innerHTML = " "; 
             }
 
             if (m9 > 0) {
-                var resM9 = 0;
-                    resM9 = parseFloat(panoIM) * parseFloat(m9);
+                    resM9 = parseInt(panoIM) * parseInt(m9);
                     console.log("Piezas a producir: "+ resM9);
+                    sumaIM = parseInt(sumaIM) + parseInt(resM9);
                     document.getElementById('Talla9M').innerHTML = Math.round(resM9);
                 } else {
                     document.getElementById('Talla9M').innerHTML = " "; 
             }
 
             if (m12 > 0) {
-                var resM12 = 0;
-                    resM12 = parseFloat(panoIM) * parseFloat(m12);
+                    resM12 = parseInt(panoIM) * parseInt(m12);
                     console.log("Piezas a producir: "+ resM12);
+                    sumaIM = parseInt(sumaIM) + parseInt(resM12);
                     document.getElementById('Talla12M').innerHTML = Math.round(resM12);
                 } else {
                     document.getElementById('Talla12M').innerHTML = " "; 
             }
 
             if (m18 > 0) {
-                var resM18 = 0;
-                    resM18 = parseFloat(panoIM) * parseFloat(m18);
+                    resM18 = parseInt(panoIM) * parseInt(m18);
                     console.log("Piezas a producir: "+ resM18);
+                    sumaIM = parseInt(sumaIM) + parseInt(resM18);
                     document.getElementById('Talla18M').innerHTML = Math.round(resM18);
             } else {
                     document.getElementById('Talla18M').innerHTML = " "; 
             }
 
             if (m24 > 0) {
-                var resM24 = 0;
-                    resM24 = parseFloat(panoIM) * parseFloat(m24);
+                    resM24 = parseInt(panoIM) * parseInt(m24);
                     console.log("Piezas a producir: "+ resM24);
+                    sumaIM = parseInt(sumaIM) + parseInt(resM24);
                     document.getElementById('Talla24M').innerHTML = Math.round(resM24);
                 } else {
                     document.getElementById('Talla24M').innerHTML = " "; 
             }
+
+            var infantilMsuma= parseInt(resM3) + parseInt(resM6) + parseInt(resM9) + parseInt(resM12) + parseInt(resM18) + parseInt(resM24);
+            console.log("total de piezas "+sumaIM+ "   total de piezas "+infantilMsuma );
+            document.getElementById('CcantidaIM').innerHTML = sumaIM;
                 
         }
 
@@ -347,8 +357,9 @@ function curva(){
         }
     
         // TALLAS DE DOBLES
-        var totalID = 0, panoID = 0, sumaIM = 0, piezaID;
+        var totalID = 0, panoID = 0, sumaID = 0, piezaID;
         var t23 =0, t45 = 0, t67 = 0, t89 = 0, t1011= 0;
+        var resT23 = 0, resT45 = 0, resT67 = 0, resT89 = 0, resT1011 = 0;
 
         piezaID = document.getElementById("piezasaID").value;
 
@@ -363,7 +374,7 @@ function curva(){
                 {   totalID += parseInt($(this).val()); }
             });
 
-            console.log("total de curvas de Infantil doble: " +totalID);
+            console.log("total de curvas de Infantil doble: " +Math.round(panoID));
 
             panoID = parseFloat(piezaID) / parseFloat(totalID);
             console.log("resultado a multiplicar adulto: " +panoID);
@@ -382,49 +393,53 @@ function curva(){
             console.log("tallas 10-11: " +t1011);
 
             if (t23 > 0) {
-                var resT23 = 0;
-                    resT23 = parseFloat(panoID) * parseFloat(t23);
+                    resT23 = parseInt(panoID) * parseInt(t23);
                     console.log("Piezas a producir: "+ resT23);
+                    sumaID = parseInt(sumaID) + parseInt(resT23);
                     document.getElementById('Talla23').innerHTML = Math.round(resT23);
                 } else {
                     document.getElementById('Talla23').innerHTML = " "; 
             }
 
             if (t45 > 0) {
-                var resT45 = 0;
-                    resT45 = parseFloat(panoID) * parseFloat(t45);
+                    resT45 = parseInt(panoID) * parseInt(t45);
                     console.log("Piezas a producir: "+ resT45);
+                    sumaID = parseInt(sumaID) + parseInt(resT45);
                     document.getElementById('Talla45').innerHTML = Math.round(resT45);
                 } else {
                     document.getElementById('Talla45').innerHTML = " "; 
             }
 
-            if (t67 > 0) {
-                var resT67 = 0;
-                    resT67 = parseFloat(panoID) * parseFloat(t67);
+            if (t67 > 0) {             
+                    resT67 = parseInt(panoID) * parseInt(t67);
                     console.log("Piezas a producir: "+ resT67);
+                    sumaID = parseInt(sumaID) + parseInt(resT67);
                     document.getElementById('Talla67').innerHTML = Math.round(resT67);
                 } else {
                     document.getElementById('Talla67').innerHTML = " "; 
             }
 
             if (t89 > 0) {
-                var resT89 = 0;
-                    resT89 = parseFloat(panoID) * parseFloat(t89);
+                    resT89 = parseInt(panoID) * parseInt(t89);
                     console.log("Piezas a producir: "+ resT89);
+                    sumaID = parseInt(sumaID) + parseInt(resT89);
                     document.getElementById('Talla89').innerHTML = Math.round(resT89);
                 } else {
                     document.getElementById('Talla89').innerHTML = " "; 
             }
 
             if (t1011 > 0) {
-                var resT1011 = 0;
-                    resT1011 = parseFloat(panoID) * parseFloat(t1011);
+                    resT1011 = parseInt(panoID) * parseInt(t1011);
                     console.log("Piezas a producir: "+ resT1011);
+                    sumaID = parseInt(sumaID) + parseInt(resT1011);
                     document.getElementById('Talla1011').innerHTML = Math.round(resT1011);
                 } else {
                     document.getElementById('Talla1011').innerHTML = " "; 
             }
+
+            var infantilDsuma= parseInt(resT23) + parseInt(resT45) + parseInt(resT67) + parseInt(resT89) + parseInt(resT1011);
+            console.log("total de piezas "+sumaID+ "   total de piezas "+infantilDsuma );
+            document.getElementById('CcantidaID').innerHTML = sumaID
                 
         } 
 
@@ -451,6 +466,7 @@ function curva(){
         // TALLAS COMPLETA
         var totalIC = 0, panoIC = 0, sumaIC = 0, piezaIC;
         var t2 = 0, t4 = 0, t6 = 0, t8 = 0, t10 = 0;
+        var resT2 = 0, resT4 = 0, resT6 = 0, resT8 = 0, resT10 = 0;
 
         piezaIC = document.getElementById("piezasaIC").value;
 
@@ -468,7 +484,7 @@ function curva(){
             console.log("total de curvas de Infantil completa: " +totalIC);
 
             panoIC = parseFloat(piezaIC) / parseFloat(totalIC);
-            console.log("resultado a multiplicar adulto: " +panoIC);
+            console.log("resultado a multiplicar adulto: " +Math.round(panoIC));
 
             var t2 = document.getElementById('t2').value;
             var t4 = document.getElementById('t4').value;
@@ -484,35 +500,34 @@ function curva(){
             console.log("tallas 10: " +t10);
 
             if (t2 > 0) {
-                var resT2 = 0;
-                    resT2 = parseFloat(panoIC) * parseFloat(t2);
+                    resT2 = parseInt(panoIC) * parseInt(t2);
                     console.log("Piezas a producir: "+ resT2);
+                    sumaIC = parseInt(sumaIC) + parseInt(resT2);
                     document.getElementById('Talla2').innerHTML = Math.round(resT2);
                 } else {
                     document.getElementById('Talla2').innerHTML = " "; 
             }
 
             if (t4 > 0) {
-                var resT4 = 0;
-                    resT4 = parseFloat(panoIC) * parseFloat(t4);
+                    resT4 = parseInt(panoIC) * parseInt(t4);
                     console.log("Piezas a producir: "+ resT4);
+                    sumaIC = parseInt(sumaIC) + parseInt(resT4);
                     document.getElementById('Talla4').innerHTML = Math.round(resT4);
                 } else {
                     document.getElementById('Talla4').innerHTML = " "; 
             }
 
             if (t6 > 0) {
-                var resT6 = 0;
-                    resT6 = parseFloat(panoIC) * parseFloat(t6);
+                    resT6 = parseInt(panoIC) * parseInt(t6);
                     console.log("Piezas a producir: "+ resT6);
+                    sumaIC = parseInt(sumaIC) + parseInt(resT6);
                     document.getElementById('Talla6').innerHTML = Math.round(resT6);
                 } else {
                     document.getElementById('Talla6').innerHTML = " "; 
             }
 
             if (t8 > 0) {
-                var resT8 = 0;
-                    resT8 = parseFloat(panoIC) * parseFloat(t8);
+                    resT8 = parseInt(panoIC) * parseInt(t8);
                     console.log("Piezas a producir: "+ resT8);
                     document.getElementById('Talla8').innerHTML = Math.round(resT8);
                 } else {
@@ -520,13 +535,17 @@ function curva(){
             }
 
             if (t10 > 0) {
-                var resT10 = 0;
-                    resT10 = parseFloat(panoIC) * parseFloat(t10);
+                    resT10 = parseInt(panoIC) * parseInt(t10);
                     console.log("Piezas a producir: "+ resT10);
+                    sumaIC = parseInt(sumaIC) + parseInt(resT10);
                     document.getElementById('Talla10').innerHTML = Math.round(resT10);
                 } else {
                     document.getElementById('Talla10').innerHTML = " "; 
             }
+
+            var infantilCsuma= parseInt(resT2) + parseInt(resT4) + parseInt(resT6) + parseInt(resT8) + parseInt(resT10);
+            console.log("total de piezas "+sumaIC+ "   total de piezas "+infantilCsuma );
+            document.getElementById('CcantidaIC').innerHTML = sumaIC;
 
         }
 
@@ -548,14 +567,5 @@ function curva(){
         if(piezaIC < 100 && piezaIC >= 1){
             alert(" la cantidad de piezas a producir debe de se mayor a 100");
         }
-
-    function mostrar(){
-
-        
-
-    }
-
-
-
 
 }

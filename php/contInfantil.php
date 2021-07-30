@@ -52,8 +52,14 @@
                                 </div>
 
                             <!-- mostrar resultado  -->
-                            <div class="form-check form-check-inline" >
-                                    <label class="form-check-label h4">Cantidad: <!-- <span id="sm"></span> --> </label>       
+                            <div class="row justify-content-around">
+                                <div class="col-3">
+                                    <label class="form-check-label h4">Cantidad</label>
+                                </div>
+
+                                <div class="col-3">
+                                    <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaIM"> </label>
+                                </div>  
                             </div>
 
                                 <div class="form-row">
@@ -87,8 +93,14 @@
                         </div>
                         
                         <div id="CantidadIM" style="display:none;"> <!-- Cantidad style="display:none;"  -->
-                            <div class="form-check form-check-inline" >
-                                <label class="form-check-label h4">Cantidad <!-- <span id="sm"></span> --> </label>       
+                            <div class="row justify-content-around">
+                                <div class="col-3">
+                                    <label class="form-check-label h4">Cantidad</label>
+                                </div>
+
+                                <div class="col-3">
+                                    <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaIM"> </label>
+                                </div>  
                             </div>
                                 
                                 <div class="form-row text-center">
@@ -193,8 +205,14 @@
 
                             <!-- mostrar resultado  -->
 
-                            <div class="form-check form-check-inline" >
-                                <label class="form-check-label h4">Cantidad: <!-- <span id="sm"></span> --> </label>       
+                            <div class="row justify-content-around">
+                                <div class="col-3">
+                                    <label class="form-check-label h4">Cantidad</label>
+                                </div>
+
+                                <div class="col-3">
+                                    <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaID"> </label>
+                                </div>  
                             </div>
 
                                 <div class="form-row">
@@ -225,8 +243,14 @@
 
                         <div id="CantidadID" style="display:none;">
 
-                            <div class="form-check form-check-inline" >
-                                <label class="form-check-label h4">Cantidad <!-- <span id="sm"></span> --> </label>       
+                            <div class="row justify-content-around">
+                                <div class="col-3">
+                                    <label class="form-check-label h4">Cantidad</label>
+                                </div>
+
+                                <div class="col-3">
+                                    <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaIC"> </label>
+                                </div>  
                             </div>
                                 
                                 <div class="form-row text-center">
@@ -322,8 +346,14 @@
                                 </div>
 
                             <!-- mostrar resultado  -->
-                            <div class="form-check form-check-inline" >
-                                <label class="form-check-label h4">Cantidad: <!-- <span id="sm"></span> --> </label>       
+                            <div class="row justify-content-around">
+                                <div class="col-3">
+                                    <label class="form-check-label h4">Cantidad</label>
+                                </div>
+
+                                <div class="col-3">
+                                    <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaIC"> </label>
+                                </div>  
                             </div>
 
                                 <div class="form-row">
