@@ -570,6 +570,12 @@ function curva(){
             alert(" la cantidad de piezas a producir debe de se mayor a 100");
         }
 }
+/*********************************************************************Base de datos de curvas***************************************************************************************************************** */
+
+
+
+
+
 /**
  *     export {
         //tallas adultos
@@ -590,3 +596,8 @@ function curva(){
             curva()
         }
         */
+
+
+
+        
+           

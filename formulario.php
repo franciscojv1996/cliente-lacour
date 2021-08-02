@@ -90,11 +90,11 @@
         <div class="container" id="btnCantidad" style="display: none;" > <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="cantidad" onclick="cantidad()" > <br>  </div>
 
         <div class="container" id="btnCurva" > <input type="button" class="btn btn-warning btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
-        <input type="button" value="siguiente">
+        <input type="button" value="siguiente" onclick="enviarCurvas()">
       </form>
 
     </div>
-  <!-- Optional JavaScript -->
+  <!-- Optional JavaScript enviarCurvas-->
     <script type="text/javascript" src="js\curva.js"></script>
     <script type="text/javascript" src="js\cantidad.js"></script>
     <script type="text/javascript" src="js\tabla.js"></script>

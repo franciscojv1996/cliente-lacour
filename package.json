@@ -1,0 +1,23 @@
+{
+  "name": "cliente-lacour",
+  "version": "1.0.0",
+  "description": "formulario de pedido de clientes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscojv1996/cliente-lacour.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franciscojv1996/cliente-lacour/issues"
+  },
+  "homepage": "https://github.com/franciscojv1996/cliente-lacour#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
