@@ -61,7 +61,7 @@
         </div>
       </div> <br>
     
-      <form action="formulario.php" method="post" >
+      <form action="img.php" method="POST" >
         <div class="col-lg-12" id="contentA"><!--Adulto  style="display: none;"-->
           <?php
             $e = new cont;
@@ -88,8 +88,8 @@
         </div>
 
         <div class="container" id="btnCantidad" style="display: none;" > <input type="button" class="btn btn-primary btn-lg btn-block btn-sm h5" value="cantidad" onclick="cantidad()" > <br>  </div>
-
         <div class="container" id="btnCurva" > <input type="button" class="btn btn-warning btn-lg btn-block btn-sm h5" value="curva" onclick="curva()"> <br> </div>
+        
         <input type="button" value="siguiente">
       </form>
 

@@ -75,46 +75,46 @@
                             </div>
 
                             <div class="col-3">
-                                <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaA"> </label>
+                                <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaA" name="CcantidaA"> </label>
                             </div>  
                         </div>
 
                             <div class="form-row">
                         
                                 <div class="form-group col-md">
-                                    <p class="text-center h3">  <span class="sm" id="TallaU">  </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaU" name="TallaU">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3">  <span class="sm" id="TallaXS">  </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXS" name="TallaXS">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaS">  </p>
+                                    <p class="text-center h3"> <span class="sm" id="TallaS" name="TallaS">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <span class="sm" id="TallaM">  </p>
+                                    <p class="text-center h3"> <span class="sm" id="TallaM" name="TallaM">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3">  <span class="sm" id="TallaL"> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaL" name="TallaL"> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3">  <span class="sm" id="TallaXL"> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXL" name="TallaXL"> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3">  <span class="sm" id="TallaXXL">  </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXXL" name="TallaXXL">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3">  <span class="sm" id="TallaXL3">  </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXL3" name="TallaXL3">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3">  <span class="sm" id="TallaXL4"> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXL4" name="TallaXL4"> </p>
                                 </div>
 
                             </div>
@@ -177,7 +177,7 @@
                             <div class="row justify-content-end">
                                 
                                 <div class="col-3" >
-                                    <p class="h4"> Total:  <p class="sm h3" id="adultoC"> </p> </p>
+                                    <p class="h4"> Total:  <p class="sm h3" id="adultoC" name="adultoC"> </p> </p>
                                 </div>  
 
                             </div>
