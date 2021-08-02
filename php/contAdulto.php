@@ -75,46 +75,46 @@
                             </div>
 
                             <div class="col-3">
-                                <label class="form-check-label h4" >Total: <p class="sm" id="CcantidaA" name="CcantidaA"> </p> </label>
+                                <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaA"> </label>
                             </div>  
                         </div>
 
                             <div class="form-row">
                         
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <p class="sm" id="TallaU"></p> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaU">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <p class="sm" id="TallaXS"></p> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXS">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <p class="sm" id="TallaS"></p> </p>
+                                    <p class="text-center h3"> <span class="sm" id="TallaS">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <p class="sm" id="TallaM"></p> </p>
+                                    <p class="text-center h3"> <span class="sm" id="TallaM">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <p class="sm" id="TallaL"></p> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaL"> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <p class="sm" id="TallaXL"></p> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXL"> </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <p class="sm" id="TallaXXL"></p> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXXL">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <p class="sm" id="TallaXL3"></p> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXL3">  </p>
                                 </div>
 
                                 <div class="form-group col-md">
-                                    <p class="text-center h3"> <p class="sm" id="TallaXL4"></p> </p>
+                                    <p class="text-center h3">  <span class="sm" id="TallaXL4"> </p>
                                 </div>
 
                             </div>
