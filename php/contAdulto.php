@@ -28,7 +28,7 @@
 
                                 <div class="form-group col-md">
                                     <label class="">XS</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xs" name="xs " placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xs" name="xs" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
@@ -43,12 +43,12 @@
 
                                 <div class="form-group col-md">
                                     <label class="">L</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="l" mane="l" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="l" name="l" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
                                     <label class="">XL</label>
-                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xl" mane="xl" placeholder="">
+                                    <input type="number" min="1" class="form-control form-control-sm montoA" id="xl" name="xl" placeholder="">
                                 </div>
 
                                 <div class="form-group col-md">
@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="col-3">
-                                <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaA" name="CcantidaA"> </label>
+                                <label class="form-check-label h4" >Total: <span class="sm" id="CcantidaA" name="CcantidaA"></span> </label>
                             </div>  
                         </div>
 
