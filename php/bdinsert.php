@@ -17,20 +17,20 @@ $CcantidaA = "<script> document.writeln(sumaA); </script>";
 
 
 
-echo $piezasaA. '<br>';
-echo "tallas adultos". '<br>';
-echo "curvas". '<br>';
-echo $u .'<br>';
-echo $sx .'<br>';
-echo $s .'<br>';
-echo $m .'<br>';
-echo $l .'<br>';
-echo $xl .'<br>';
-echo $xxl .'<br>';
-echo $xl3 .'<br>'; 
-echo $xl4 .'<br>';
-echo "cantidad". '<br>';
-echo $CcantidaA .'<br>';
+echo $piezasaA . '<br>';
+echo "tallas adultos" . '<br>';
+echo "curvas" . '<br>';
+echo $u . '<br>';
+echo $sx . '<br>';
+echo $s . '<br>';
+echo $m . '<br>';
+echo $l . '<br>';
+echo $xl . '<br>';
+echo $xxl . '<br>';
+echo $xl3 . '<br>';
+echo $xl4 . '<br>';
+echo "cantidad" . '<br>';
+echo $CcantidaA . '<br>';
 
 
 
