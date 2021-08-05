@@ -20,8 +20,8 @@ function curva(){
 
         console.log("total de curvas de Adulto: " +totalA);
 
-        panoA = parseFloat(piezaA) / parseFloat(totalA);
-        console.log("resultado a multiplicar adulto: " +Math.round(panoA));
+        panoA = parseInt(piezaA) / parseInt(totalA);
+        console.log("resultado a multiplicar adulto: " +panoA);
 
             u = document.getElementById("u").value;
             xs = document.getElementById("xs").value;
