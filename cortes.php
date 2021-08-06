@@ -67,13 +67,13 @@
       </div>
     </div> <br>
 
-    <form action="php/dbtalla.php" method="POST">
+    <form action="php/bdinsert.php" method="POST">
       <div class="col-lg-12">
 
         <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 font-weight-bold">Codigo de Diseño</label>
+          <label class="col-sm-2 font-weight-bold">Codigo de Diseño</label>
           <div class="col-sm-9">
-            <input type="email" class="form-control" placeholder="Ejemplo de Codigo de diseño">
+            <input type="text" class="form-control" name="codDis" placeholder="Ejemplo de Codigo de diseño">
           </div>
         </div>
 
@@ -116,7 +116,7 @@
           <center>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" value="1" id="aplicar">
+              <input class="form-check-input" type="checkbox" value="1" name="aplicar" id="aplicar">
               <label class="form-check-label font-weight-bold">APLICAR PARA SIGUIENTES REFERENCIAS</label>
             </div>
             
@@ -129,12 +129,12 @@
             <label class="form-check-label font-weight-bold">MUESTRA FISICA:&nbsp;</label>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="muestra" id="muestra" value="option1">
+              <input class="form-check-input" type="radio" name="valor" id="muestra" value="si">
               <label class="form-check-label">SI</label>
             </div>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="muestra" id="muestra" value="option2">
+              <input class="form-check-input" type="radio" name="valor" id="muestra" value="no">
               <label class="form-check-label">NO</label>
             </div>
 

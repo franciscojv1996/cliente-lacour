@@ -157,7 +157,6 @@ function curva(){
 /*++++++++++++++++++++++++++++++++++++++++++++TALLAS JUVENIL+++++++++++++++++++++++++++++++++++++++++++++++++++++++*/ 
 
     var totalJ = 0, panoJ = 0, sumaJ = 0, piezaJ;
-    var t12 = 0, t14 = 0, t16 = 0;
     var resT12 = 0, resT14 = 0,  resT16 = 0;
 
     piezaJ = document.getElementById("piezasaJ").value;
@@ -172,10 +171,10 @@ function curva(){
             {   totalJ += parseInt($(this).val()); }
         });
 
-        console.log("total de curvas de Adulto: " +totalJ);
+        console.log("total de curvas de Juvenil: " +totalJ);
 
-        panoJ = parseFloat(piezaJ) / parseFloat(totalJ);
-        console.log("resultado a multiplicar adulto: " +Math.round(panoJ));
+        panoJ = parseInt(piezaJ) / parseInt(totalJ);
+        console.log("resultado a multiplicar junevil: " + panoJ);
 
         var t12 = document.getElementById('t12').value;
         var t14 = document.getElementById('t14').value;

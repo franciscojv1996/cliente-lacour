@@ -326,7 +326,7 @@
 
                                     <div class="form-group col-md">
                                         <label>4</label>
-                                        <input type="number" min="1" class="form-control form-control-sm montoIC" id="t4" name="t2"placeholder="">
+                                        <input type="number" min="1" class="form-control form-control-sm montoIC" id="t4" name="t4"placeholder="">
                                     </div>
 
                                     <div class="form-group col-md">
