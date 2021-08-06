@@ -398,4 +398,44 @@ function adultoCurva($piezasaA, $u, $xs, $s, $m, $l, $xl, $xxl, $xl3, $xl4)
   $sentencia = "INSERT INTO talla_adulto (cantidad, ucuad, xscuad, scuad, mcuad, lcuad, xlcuad, xxlcuad, 3xlcuad, 4xlcuad, ucaad, xscaad, scaad, mcaad, lcaad, xlcaad, xxlcaad, 3xlcaad, 4xlcaad, total_cant) VALUES ('" . $piezasaA . "', '" . $u . "', '" . $xs . "', '" . $s . "', '" . $m . "', '" . $l . "', '" . $xl . "', '" . $xxl . "', '" . $xl3 . "', '" . $xl4 . "','" . $resU . "','" . $resXS . "','" . $resS . "','" . $resM . "','" . $resL . "','" . $resXL . "','" . $resXXL . "','" . $resXL3 . "','" . $resXL4 . "','" . $sumaToatl . "', '" . $fecha . "', '" . $hora . "') ";
   $conexion->query($sentencia) or die("Error al ingresar los datos" . mysqli_error($conexion));
 }
+
+
+
+
+
+if(isset($_REQUEST["u"])){
+        $sumaA += $_REQUEST["u"];
+    }
+
+    if(isset($_REQUEST["xs"])){
+        $sumaA += $_REQUEST["xs"];
+    }
+
+    if(isset($_REQUEST["s1"])){
+        $sumaA += $_REQUEST["s1"];
+    }
+
+    if($_REQUEST["m"]){
+        $sumaA += $_REQUEST["m"];
+    }
+
+    if($_REQUEST["l"]){
+        $sumaA += $_REQUEST["l"];
+    }
+
+    if($_REQUEST["xl"]){
+        $sumaA += $_REQUEST["xl"];
+    }
+
+    if($_REQUEST["xxl"]){
+        $sumaA += $_REQUEST["xxl"];
+    }
+
+    if($_REQUEST["xl3"]){
+        $sumaA += $_REQUEST["xl3"];
+    }
+
+    if($_REQUEST["xl4"]){
+        $sumaA += $_REQUEST["xl4"];
+    }
 */
