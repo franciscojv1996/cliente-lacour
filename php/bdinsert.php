@@ -1,15 +1,17 @@
 <?php
-$piezasaA = $_REQUEST["piezasaA"];
-$piezasaJ = $_REQUEST["piezasaJ"];
-$piezasaIM = $_REQUEST["piezasaIM"];
-$piezasaID = $_REQUEST["piezasaID"];
-$piezasaIC = $_REQUEST["piezasaIC"];
+include "../config/conexion.php";
 
 $fecha = date('d/m/Y');
 $hora = date('h:i:s a');
 echo $fecha . '<br>' . $hora . '<br>';
 $codDis = $_REQUEST["codDis"];
 echo "Codigo de diseño: " . $codDis . '<br>' . '<br>';
+
+$piezasaA = $_REQUEST["piezasaA"];
+$piezasaJ = $_REQUEST["piezasaJ"];
+$piezasaIM = $_REQUEST["piezasaIM"];
+$piezasaID = $_REQUEST["piezasaID"];
+$piezasaIC = $_REQUEST["piezasaIC"];
 
 $sumaA = 0;
 $sumaJ = 0;
@@ -162,6 +164,10 @@ if ($piezasaA >= 100) {
     echo "talla 3xl: " . $resXL3 . '<br>';
     echo "talla 4xl: " . $resXL4 . '<br>';
     echo "suma con acumulador: " . $sumaToatlA . '<br>' . "suma sin acumulador: " . $sumaResA . '<br>';
+
+    $sentenciaAdulto = "INSERT INTO talla_adulto (cod_diseno, cantidad, ucuad, xscuad, scuad, mcuad, lcuad, xlcuad, xxlcuad, 3xlcuad, 4xlcuad, ucaad, xscaad, scaad, mcaad, lcaad, xlcaad, xxlcaad, 3xlcaad, 4xlcaad, total_cant, fecha, hora) VALUE 
+                                                ('" . $codDis . "', '" . $piezasaA . "', '" . $u . "', '" . $xs . "', '" . $s . "', '" . $m . "', '" . $l . "', '" . $xl . "', '" . $xxl . "', '" . $xl3 . "', '" . $xl4 . "', '" . $resU . "', '" . $resXS . "', '" . $resS . "', '" . $resM . "', '" . $resL . "', '" . $resXL . "', '" . $resXXL . "', '" . $resXL3 . "', '" . $resXL4 . "', '" . $sumaToatlA . "', '" . $fecha . "', '" . $hora . "')";
+    $conexion->query($sentenciaAdulto) or die("Error al ingresar los datos" . mysqli_error($conexion));
 }
 
 if ($piezasaJ >= 100) {
@@ -201,7 +207,7 @@ if ($piezasaJ >= 100) {
 
     if ($t14 > 0) {
         $resT14 = $panoJ * $t14;
-        $sumaToatlJ += $resT12;
+        $sumaToatlJ += $resT14;
     } else {
         $t14 = 0;
         $resT12 = 0;
@@ -222,9 +228,15 @@ if ($piezasaJ >= 100) {
     echo "talla 14: " . $resT14 . '<br>';
     echo "talla 16: " . $resT16 . '<br>';
     echo "suma con acumulador: " . $sumaToatlJ . '<br>' . "suma sin acumulador: " . $sumaResJ . '<br>';
+
+    $sentenciaJuvenil = "INSERT INTO talla_juvenil (cod_diseno, cantidad, 12cuju, 14cuju, 16cuju, 12caju, 14caju, 16aju, total_cant, fecha, hora) VALUE 
+                                                    ('" . $codDis . "', '" . $piezasaJ . "', '" . $t12 . "', '" . $t14 . "', '" . $t16 . "', '" . $resT12 . "', '" . $resT14 . "', '" . $resT16 . "',  '" . $sumaToatlJ . "', '" . $fecha . "', '" . $hora . "')";
+    $conexion->query($sentenciaJuvenil) or die("Error al ingresar los datos" . mysqli_error($conexion));
 }
 
 if ($piezasaIM >= 100 || $piezasaID >= 100 || $piezasaIC >= 100) {
+
+    echo "TALLAS INFANTILES";
 
     if ($piezasaIM >= 100) {
         $m3 = $_REQUEST["m3"];
@@ -253,17 +265,79 @@ if ($piezasaIM >= 100 || $piezasaID >= 100 || $piezasaIC >= 100) {
             $sumaIM += $m24;
         }
 
-
-        echo "tallas juvenil" . '<br>';
-        echo "total de piezas a producir " . $piezasaIM . '<br>';
-        echo "curvas" . '<br>';
+        echo "TALLA DE INFANTIL MESES " . '&nbsp; &nbsp;' . "piezas a producir: " . $piezasaIM . '<br>';
         echo "talla 3M: " . $m3 . '<br>';
         echo "talla 6M: " . $m6 . '<br>';
         echo "talla 9M: " . $m9 . '<br>';
         echo "talla 12M: " . $m12 . '<br>';
         echo "talla 18M: " . $m18 . '<br>';
         echo "talla 24M: " . $m24 . '<br>';
-    }/*
+        echo "total de las curvas: " . $sumaIM . '<br>';
+        $sumaToatlIM = 0;
+        $panoInfantilM = $piezasaIM / $sumaIM;
+        $panoIM = bcdiv($panoInfantilM, '1', 0);
+
+        echo "paño con desimales: " . $panoInfantilM . '&nbsp; &nbsp;' . "paño sin decimales: " . $panoIM . '<br>' . '<br>';
+
+        if ($m3 > 0) {
+            $resM3 = $panoIM * $m3;
+            $sumaToatlIM += $resM3;
+        } else {
+            $m3 = 0;
+            $resM3 = 0;
+        }
+
+        if ($m6 > 0) {
+            $resM6 = $panoIM * $m6;
+            $sumaToatlIM += $resM6;
+        } else {
+            $m6 = 0;
+            $resM6 = 0;
+        }
+
+        if ($m9 > 0) {
+            $resM9 = $panoIM * $m9;
+            $sumaToatlIM += $resM9;
+        } else {
+            $m9 = 0;
+            $resM9  = 0;
+        }
+
+        if ($m12 > 0) {
+            $resM12 = $panoIM * $m12;
+            $sumaToatlIM += $resM12;
+        } else {
+            $m12 = 0;
+            $resM12 = 0;
+        }
+
+        if ($m18 > 0) {
+            $resM18 = $panoIM * $m18;
+            $sumaToatlIM += $resM18;
+        } else {
+            $m18 = 0;
+            $resM18 = 0;
+        }
+
+        if ($m24 > 0) {
+            $resM24 = $panoIM * $m24;
+            $sumaToatlIM += $resM24;
+        } else {
+            $m24 = 0;
+            $resM24 = 0;
+        }
+
+        $sumaResIM = $resM3 + $resM6 + $resM9 + $resM12 + $resM18 + $resM24;
+
+        echo "CANTIDAD" . '<br>';
+        echo "talla 3M: " . $resM3 . '<br>';
+        echo "talla 6M: " . $resM6 . '<br>';
+        echo "talla 9M: " . $resM9 . '<br>';
+        echo "talla 12M: " . $resM12 . '<br>';
+        echo "talla 18M: " . $resM18 . '<br>';
+        echo "talla 24M: " . $resM24 . '<br>';
+        echo "suma con acumulador: " . $sumaToatlIM . '<br>' . "suma sin acumulador: " . $sumaResIM . '<br>';
+    }
 
     if ($piezasaID >= 100) {
         $t23 = $_REQUEST["t23"];
@@ -272,30 +346,182 @@ if ($piezasaIM >= 100 || $piezasaID >= 100 || $piezasaIC >= 100) {
         $t89 = $_REQUEST["t89"];
         $t1011 = $_REQUEST["t1011"];
 
-        echo "tallas doble" . '<br>';
-        echo "total de piezas a producir " . $piezasaID . '<br>';
-        echo "curvas" . '<br>';
+        if ($t23 > 0) {
+            $sumaID += $t23;
+        }
+
+        if ($t45 > 0) {
+            $sumaID += $t45;
+        }
+
+        if ($t67 > 0) {
+            $sumaID += $t67;
+        }
+
+        if ($t89 > 0) {
+            $sumaID += $t89;
+        }
+
+        if ($t1011 > 0) {
+            $sumaID += $t1011;
+        }
+
+        echo "TALLA DE INFANTIL DOBLE " . '&nbsp; &nbsp;' . "piezas a producir: " . $piezasaID . '<br>';
         echo "talla 2-3: " . $t23 . '<br>';
         echo "talla 4-5: " . $t45 . '<br>';
         echo "talla 6-7: " . $t67 . '<br>';
         echo "talla 8-9: " . $t89 . '<br>';
         echo "talla 10-11: " . $t1011 . '<br>';
+
+        echo "total de las curvas: " . $sumaID . '<br>';
+        $sumaToatlID = 0;
+        $panoInfantilD = $piezasaID / $sumaID;
+        $panoID = bcdiv($panoInfantilD, '1', 0);
+
+        echo "paño con desimales: " . $panoInfantilD . '&nbsp; &nbsp;' . "paño sin decimales: " . $panoID . '<br>' . '<br>';
+
+        if ($t23 > 0) {
+            $resT23 = $panoID * $t23;
+            $sumaToatlID += $resT23;
+        } else {
+            $t23 = 0;
+            $resT23 = 0;
+        }
+
+        if ($t45 > 0) {
+            $resT45 = $panoID * $t45;
+            $sumaToatlID += $resT45;
+        } else {
+            $t45 = 0;
+            $resT45 = 0;
+        }
+
+        if ($t67 > 0) {
+            $resT67 = $panoID * $t67;
+            $sumaToatlID += $resT67;
+        } else {
+            $t67 = 0;
+            $resT67 = 0;
+        }
+
+        if ($t89 > 0) {
+            $resT89 = $panoID * $t89;
+            $sumaToatlID += $resT89;
+        } else {
+            $t89 = 0;
+            $resT89 = 0;
+        }
+
+        if ($t1011 > 0) {
+            $resT1011 = $panoID * $t1011;
+            $sumaToatlID += $resT1011;
+        } else {
+            $t1011 = 0;
+            $resT1011 = 0;
+        }
+
+        $sumaResID = $resT23 + $resT45 + $resT67 + $resT89 + $resT1011;
+
+        echo "CANTIDAD" . '<br>';
+        echo "talla 2-3: " . $resT23 . '<br>';
+        echo "talla 4-5: " . $resT45 . '<br>';
+        echo "talla 6-7: " . $resT67 . '<br>';
+        echo "talla 8-9: " . $resT89 . '<br>';
+        echo "talla 10-11: " . $resT1011 . '<br>';
+        echo "suma con acumulador: " . $sumaToatlID . '<br>' . "suma sin acumulador: " . $sumaResID . '<br>';
     }
 
     if ($piezasaIC >= 100) {
+
         $t2 = $_REQUEST["t2"];
         $t4 = $_REQUEST["t4"];
         $t6 = $_REQUEST["t6"];
         $t8 = $_REQUEST["t8"];
         $t10 = $_REQUEST["t10"];
 
-        echo "tallas completa" . '<br>';
-        echo "total de piezas a producir " . $piezasaID . '<br>';
-        echo "curvas" . '<br>';
+        if ($t2 > 0) {
+            $sumaIC += $t2;
+        }
+
+        if ($t4 > 0) {
+            $sumaIC += $t4;
+        }
+
+        if ($t6 > 0) {
+            $sumaIC += $t6;
+        }
+
+        if ($t8 > 0) {
+            $sumaIC += $t8;
+        }
+
+        if ($t10 > 0) {
+            $sumaIC += $t10;
+        }
+
+        echo "TALLA DE INFANTIL COMPLETA " . '&nbsp; &nbsp;' . "piezas a producir: " . $piezasaIC . '<br>';
         echo "talla 2: " . $t2 . '<br>';
         echo "talla 4: " . $t4 . '<br>';
         echo "talla 6: " . $t6 . '<br>';
         echo "talla 8: " . $t8 . '<br>';
         echo "talla 10: " . $t10 . '<br>';
-    } */
+
+
+        echo "total de las curvas: " . $sumaIC . '<br>';
+        $sumaToatlIC = 0;
+        $panoInfantilC = $piezasaIC / $sumaIC;
+        $panoIC = bcdiv($panoInfantilC, '1', 0);
+
+        echo "paño con desimales: " . $panoInfantilC . '&nbsp; &nbsp;' . "paño sin decimales: " . $panoIC . '<br>' . '<br>';
+
+        if ($t2 > 0) {
+            $resT2 = $panoIC * $t2;
+            $sumaToatlIC += $resT2;
+        } else {
+            $t2 = 0;
+            $resT2 = 0;
+        }
+
+        if ($t4 > 0) {
+            $resT4 = $panoIC * $t4;
+            $sumaToatlIC += $resT4;
+        } else {
+            $t4 = 0;
+            $resT4 = 0;
+        }
+
+        if ($t6 > 0) {
+            $resT6 = $panoIC * $t6;
+            $sumaToatlIC += $resT6;
+        } else {
+            $t6 = 0;
+            $resT6 = 0;
+        }
+
+        if ($t8 > 0) {
+            $resT8 = $panoIC * $t8;
+            $sumaToatlIC += $resT8;
+        } else {
+            $t8 = 0;
+            $resT8 = 0;
+        }
+
+        if ($t10 > 0) {
+            $resT10 = $panoIC * $t10;
+            $sumaToatlIC += $resT10;
+        } else {
+            $t10 = 0;
+            $resT10 = 0;
+        }
+
+        $sumaResIC = $resT2 + $resT4 + $resT6 + $resT8 + $resT10;
+
+        echo "CANTIDAD" . '<br>';
+        echo "talla 2: " . $resT23 . '<br>';
+        echo "talla 4: " . $resT45 . '<br>';
+        echo "talla 6: " . $resT67 . '<br>';
+        echo "talla 8: " . $resT89 . '<br>';
+        echo "talla 10: " . $resT1011 . '<br>';
+        echo "suma con acumulador: " . $sumaToatlIC . '<br>' . "suma sin acumulador: " . $sumaResIC . '<br>';
+    }
 }

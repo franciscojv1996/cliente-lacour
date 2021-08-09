@@ -73,7 +73,7 @@
         <div class="form-group row">
           <label class="col-sm-2 font-weight-bold">Codigo de Diseño</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" name="codDis" placeholder="Ejemplo de Codigo de diseño">
+            <input type="text" class="form-control" id="codDis" name="codDis" placeholder="Ejemplo de Codigo de diseño">
           </div>
         </div>
 
@@ -119,7 +119,7 @@
               <input class="form-check-input" type="checkbox" value="1" name="aplicar" id="aplicar">
               <label class="form-check-label font-weight-bold">APLICAR PARA SIGUIENTES REFERENCIAS</label>
             </div>
-            
+
           </center>
         </div>
 
