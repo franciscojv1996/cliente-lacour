@@ -8,11 +8,6 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<style>
-  #cuerpoT {
-    display: none;
-  }
-</style>
 
 <body>
   <?php
@@ -56,12 +51,12 @@
         <h4>Tipo de pedido</h4>
 
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="opc" value="1" onchange="mostrar(this.value);" checked>
+          <input class="form-check-input" type="radio" name="radio1" value="1" onchange="mostrar(this.value);" checked>
           <label class="form-check-label" for="inlineRadio1">Curva</label>
         </div>
 
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="opc" value="2" onchange="mostrar(this.value);">
+          <input class="form-check-input" type="radio" name="radio1" value="2" onchange="mostrar(this.value);">
           <label class="form-check-label" for="inlineRadio2">Cantidad</label>
         </div>
       </div>

@@ -391,27 +391,27 @@
                             
                                     <div class="form-group col-md">
                                         <label class="">2</label>
-                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct23" placeholder="">
+                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct2" placeholder="">
                                     </div>
 
                                     <div class="form-group col-md">
                                         <label class="">4</label>
-                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct45" placeholder="">
+                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct4" placeholder="">
                                     </div>
 
                                     <div class="form-group col-md">
                                         <label class="">6</label>
-                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct67" placeholder="">
+                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct6" placeholder="">
                                     </div>
 
                                     <div class="form-group col-md">
                                         <label class="">8</label>
-                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct89" placeholder="">
+                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct8" placeholder="">
                                     </div>
 
                                     <div class="form-group col-md">
                                         <label class="">10</label>
-                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct1011" placeholder="">
+                                        <input type="number" min="1" class="InfantilC form-control form-control-sm" name="ct10" placeholder="">
                                     </div>
 
                                 </div>

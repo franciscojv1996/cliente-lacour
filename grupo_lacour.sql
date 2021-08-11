@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-07-2021 a las 20:09:39
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 8.0.8
+-- Tiempo de generación: 11-08-2021 a las 22:15:12
+-- Versión del servidor: 10.4.19-MariaDB
+-- Versión de PHP: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -161,34 +161,6 @@ INSERT INTO `orden` (`id_ord`, `rif_tip`, `rif`, `nombre`, `codigo`, `servicio`,
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `orden_temp`
---
-
-CREATE TABLE `orden_temp` (
-  `id_ord` int(11) NOT NULL,
-  `rif_tip` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
-  `rif` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
-  `nombre` varchar(70) COLLATE utf8_spanish_ci NOT NULL,
-  `codigo` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `servicio` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `hangtags` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
-  `adhesiva` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
-  `empaque` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
-  `hora` varchar(12) COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Volcado de datos para la tabla `orden_temp`
---
-
-INSERT INTO `orden_temp` (`id_ord`, `rif_tip`, `rif`, `nombre`, `codigo`, `servicio`, `hangtags`, `adhesiva`, `empaque`, `fecha`, `hora`) VALUES
-(1, 'J', '12123456-7', 'De la fabrica', '1564788', 'confeccion', 'si', 'no', 'individual', '30-07-2021', '08:01:01 am'),
-(2, 'E', '06123456-7', 'Tortas Mariela', '1564788', 'estampado', 'no', 'no', 'curvas', '30-07-2021', '09:22:33 am');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `talla_adulto`
 --
 
@@ -198,24 +170,24 @@ CREATE TABLE `talla_adulto` (
   `rif` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `cod_diseno` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `cantidad` varchar(70) COLLATE utf8_spanish_ci NOT NULL,
-  `ucuad` int(3) NOT NULL,
-  `xscuad` int(3) NOT NULL,
-  `scuad` int(3) NOT NULL,
-  `mcuad` int(3) NOT NULL,
-  `lcuad` int(3) NOT NULL,
-  `xlcuad` int(3) NOT NULL,
-  `xxlcuad` int(3) NOT NULL,
-  `3xlcuad` int(3) NOT NULL,
-  `4xlcuad` int(3) NOT NULL,
-  `ucaad` int(3) NOT NULL,
-  `xscaad` int(3) NOT NULL,
-  `scaad` int(3) NOT NULL,
-  `mcaad` int(3) NOT NULL,
-  `lcaad` int(3) NOT NULL,
-  `xlcaad` int(3) NOT NULL,
-  `xxlcaad` int(3) NOT NULL,
-  `3xlcaad` int(3) NOT NULL,
-  `4xlcaad` int(3) NOT NULL,
+  `ucuad` int(3) NOT NULL DEFAULT 0,
+  `xscuad` int(3) NOT NULL DEFAULT 0,
+  `scuad` int(3) NOT NULL DEFAULT 0,
+  `mcuad` int(3) NOT NULL DEFAULT 0,
+  `lcuad` int(3) NOT NULL DEFAULT 0,
+  `xlcuad` int(3) NOT NULL DEFAULT 0,
+  `xxlcuad` int(3) NOT NULL DEFAULT 0,
+  `3xlcuad` int(3) NOT NULL DEFAULT 0,
+  `4xlcuad` int(3) NOT NULL DEFAULT 0,
+  `ucaad` int(3) NOT NULL DEFAULT 0,
+  `xscaad` int(3) NOT NULL DEFAULT 0,
+  `scaad` int(3) NOT NULL DEFAULT 0,
+  `mcaad` int(3) NOT NULL DEFAULT 0,
+  `lcaad` int(3) NOT NULL DEFAULT 0,
+  `xlcaad` int(3) NOT NULL DEFAULT 0,
+  `xxlcaad` int(3) NOT NULL DEFAULT 0,
+  `3xlcaad` int(3) NOT NULL DEFAULT 0,
+  `4xlcaad` int(3) NOT NULL DEFAULT 0,
   `total_cant` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
   `fecha` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
   `hora` varchar(12) COLLATE utf8_spanish_ci NOT NULL
@@ -224,37 +196,73 @@ CREATE TABLE `talla_adulto` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `talla_adulto_temp`
+-- Estructura de tabla para la tabla `talla_infantilc`
 --
 
-CREATE TABLE `talla_adulto_temp` (
-  `id_ad` int(11) NOT NULL,
-  `rif_tip` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
-  `rif` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
-  `cod_diseno` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
-  `cantidad` varchar(70) COLLATE utf8_spanish_ci NOT NULL,
-  `ucuad` int(3) NOT NULL,
-  `xscuad` int(3) NOT NULL,
-  `scuad` int(3) NOT NULL,
-  `mcuad` int(3) NOT NULL,
-  `lcuad` int(3) NOT NULL,
-  `xlcuad` int(3) NOT NULL,
-  `xxlcuad` int(3) NOT NULL,
-  `3xlcuad` int(3) NOT NULL,
-  `4xlcuad` int(3) NOT NULL,
-  `ucaad` int(3) NOT NULL,
-  `xscaad` int(3) NOT NULL,
-  `scaad` int(3) NOT NULL,
-  `mcaad` int(3) NOT NULL,
-  `lcaad` int(3) NOT NULL,
-  `xlcaad` int(3) NOT NULL,
-  `xxlcaad` int(3) NOT NULL,
-  `3xlcaad` int(3) NOT NULL,
-  `4xlcaad` int(3) NOT NULL,
-  `total_cant` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
-  `hora` varchar(12) COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+CREATE TABLE `talla_infantilc` (
+  `id_tic` int(11) NOT NULL,
+  `cod_diseno` text DEFAULT NULL,
+  `can_tic` int(11) DEFAULT 0,
+  `t2cutic` int(11) DEFAULT 0,
+  `t4cutic` int(11) DEFAULT 0,
+  `t6cutic` int(11) DEFAULT 0,
+  `t8cutic` int(11) DEFAULT 0,
+  `t10cutic` int(11) DEFAULT 0,
+  `t2catic` int(11) DEFAULT 0,
+  `t4catic` int(11) DEFAULT 0,
+  `t6catic` int(11) DEFAULT 0,
+  `t8catic` int(11) DEFAULT 0,
+  `t10catic` int(11) DEFAULT 0,
+  `total_cantic` int(11) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `talla_infantild`
+--
+
+CREATE TABLE `talla_infantild` (
+  `id_tid` int(11) NOT NULL,
+  `cod_diseno` text DEFAULT NULL,
+  `can_tid` int(11) DEFAULT 0,
+  `t23cutid` int(11) DEFAULT 0,
+  `t45cutid` int(11) DEFAULT 0,
+  `t67cutid` int(11) DEFAULT 0,
+  `t89cutid` int(11) DEFAULT 0,
+  `t1011cutid` int(11) DEFAULT 0,
+  `t23catid` int(11) DEFAULT 0,
+  `t45catid` int(11) DEFAULT 0,
+  `t67catid` int(11) DEFAULT 0,
+  `t89catid` int(11) DEFAULT 0,
+  `t1011catid` int(11) DEFAULT 0,
+  `total_cantid` int(11) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `talla_infantilm`
+--
+
+CREATE TABLE `talla_infantilm` (
+  `id_tim` int(11) NOT NULL,
+  `cod_diseno` text DEFAULT '0',
+  `can_tim` int(11) DEFAULT 0,
+  `m3cutim` int(11) DEFAULT 0,
+  `m6cutim` int(11) DEFAULT 0,
+  `m9cutim` int(11) DEFAULT 0,
+  `m12cutim` int(11) DEFAULT 0,
+  `m18cutim` int(11) DEFAULT 0,
+  `m24cutim` int(11) DEFAULT 0,
+  `m3catim` int(11) DEFAULT 0,
+  `m6catim` int(11) DEFAULT 0,
+  `m9catim` int(11) DEFAULT 0,
+  `m12catim` int(11) DEFAULT 0,
+  `m18catim` int(11) DEFAULT 0,
+  `m24catim` int(11) DEFAULT 0,
+  `total_cantim` int(11) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -268,35 +276,12 @@ CREATE TABLE `talla_juvenil` (
   `rif` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `cod_diseno` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `cantidad` varchar(70) COLLATE utf8_spanish_ci NOT NULL,
-  `12cuju` int(3) NOT NULL,
-  `14cuju` int(3) NOT NULL,
-  `16cuju` int(3) NOT NULL,
-  `12caju` int(3) NOT NULL,
-  `14caju` int(3) NOT NULL,
-  `16aju` int(3) NOT NULL,
-  `total_cant` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
-  `hora` varchar(12) COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `talla_juvenil_temp`
---
-
-CREATE TABLE `talla_juvenil_temp` (
-  `id_juv` int(11) NOT NULL,
-  `rif_tip` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
-  `rif` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
-  `cod_diseno` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
-  `cantidad` varchar(70) COLLATE utf8_spanish_ci NOT NULL,
-  `12cuju` int(3) NOT NULL,
-  `14cuju` int(3) NOT NULL,
-  `16cuju` int(3) NOT NULL,
-  `12caju` int(3) NOT NULL,
-  `14caju` int(3) NOT NULL,
-  `16aju` int(3) NOT NULL,
+  `12cuju` int(3) NOT NULL DEFAULT 0,
+  `14cuju` int(3) NOT NULL DEFAULT 0,
+  `16cuju` int(3) NOT NULL DEFAULT 0,
+  `12caju` int(3) NOT NULL DEFAULT 0,
+  `14caju` int(3) NOT NULL DEFAULT 0,
+  `16aju` int(3) NOT NULL DEFAULT 0,
   `total_cant` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
   `fecha` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
   `hora` varchar(12) COLLATE utf8_spanish_ci NOT NULL
@@ -348,33 +333,33 @@ ALTER TABLE `orden`
   ADD PRIMARY KEY (`id_ord`);
 
 --
--- Indices de la tabla `orden_temp`
---
-ALTER TABLE `orden_temp`
-  ADD PRIMARY KEY (`id_ord`);
-
---
 -- Indices de la tabla `talla_adulto`
 --
 ALTER TABLE `talla_adulto`
   ADD PRIMARY KEY (`id_ad`);
 
 --
--- Indices de la tabla `talla_adulto_temp`
+-- Indices de la tabla `talla_infantilc`
 --
-ALTER TABLE `talla_adulto_temp`
-  ADD PRIMARY KEY (`id_ad`);
+ALTER TABLE `talla_infantilc`
+  ADD PRIMARY KEY (`id_tic`);
+
+--
+-- Indices de la tabla `talla_infantild`
+--
+ALTER TABLE `talla_infantild`
+  ADD PRIMARY KEY (`id_tid`);
+
+--
+-- Indices de la tabla `talla_infantilm`
+--
+ALTER TABLE `talla_infantilm`
+  ADD PRIMARY KEY (`id_tim`);
 
 --
 -- Indices de la tabla `talla_juvenil`
 --
 ALTER TABLE `talla_juvenil`
-  ADD PRIMARY KEY (`id_juv`);
-
---
--- Indices de la tabla `talla_juvenil_temp`
---
-ALTER TABLE `talla_juvenil_temp`
   ADD PRIMARY KEY (`id_juv`);
 
 --
@@ -412,33 +397,33 @@ ALTER TABLE `orden`
   MODIFY `id_ord` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `orden_temp`
---
-ALTER TABLE `orden_temp`
-  MODIFY `id_ord` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT de la tabla `talla_adulto`
 --
 ALTER TABLE `talla_adulto`
   MODIFY `id_ad` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `talla_adulto_temp`
+-- AUTO_INCREMENT de la tabla `talla_infantilc`
 --
-ALTER TABLE `talla_adulto_temp`
-  MODIFY `id_ad` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `talla_infantilc`
+  MODIFY `id_tic` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `talla_infantild`
+--
+ALTER TABLE `talla_infantild`
+  MODIFY `id_tid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `talla_infantilm`
+--
+ALTER TABLE `talla_infantilm`
+  MODIFY `id_tim` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `talla_juvenil`
 --
 ALTER TABLE `talla_juvenil`
-  MODIFY `id_juv` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `talla_juvenil_temp`
---
-ALTER TABLE `talla_juvenil_temp`
   MODIFY `id_juv` int(11) NOT NULL AUTO_INCREMENT;
 
 --

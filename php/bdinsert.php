@@ -337,6 +337,10 @@ if ($piezasaIM >= 100 || $piezasaID >= 100 || $piezasaIC >= 100) {
         echo "talla 18M: " . $resM18 . '<br>';
         echo "talla 24M: " . $resM24 . '<br>';
         echo "suma con acumulador: " . $sumaToatlIM . '<br>' . "suma sin acumulador: " . $sumaResIM . '<br>';
+
+        $sentenciaInfantilM = "INSERT INTO talla_infantilm (cod_diseno, can_tim, m3cutim, m6cutim, m9cutim, m12cutim, m18cutim, m24cutim, m3catim, m6catim, m9catim, m12catim, m18catim, m24catim, total_cantim) VALUE 
+                                                    ('" . $codDis . "', '" . $piezasaIM . "', '" . $m3 . "', '" . $m6 . "', '" . $m9 . "', '" . $m12 . "', '" . $m18 . "', '" . $m24 . "', '" . $resM3 . "', '" . $resM6 . "', '" . $resM9 . "', '" . $resM12 . "', '" . $resM18 . "', '" . $resM24 . "', '" . $sumaToatlIM . "')";
+        $conexion->query($sentenciaInfantilM) or die("Error al ingresar los datos" . mysqli_error($conexion));
     }
 
     if ($piezasaID >= 100) {
@@ -429,6 +433,10 @@ if ($piezasaIM >= 100 || $piezasaID >= 100 || $piezasaIC >= 100) {
         echo "talla 8-9: " . $resT89 . '<br>';
         echo "talla 10-11: " . $resT1011 . '<br>';
         echo "suma con acumulador: " . $sumaToatlID . '<br>' . "suma sin acumulador: " . $sumaResID . '<br>';
+
+        $sentenciaInfantilD = "INSERT INTO `talla_infantild`(`cod_diseno`, `can_tid`, `t23cutid`, `t45cutid`, `t67cutid`, `t89cutid`, `t1011cutid`, `t23catid`, `t45catid`, `t67catid`, `t89catid`, `t1011catid`, `total_cantid`) VALUES 
+                                                            ('" . $codDis . "','" . $piezasaID . "','" . $t23 . "','" . $t45 . "','" . $t67 . "','" . $t89 . "','" . $t1011 . "','" . $resT23 . "','.$resT45.','" . $resT67 . "','" . $resT89 . "','" . $resT1011 . "','" . $sumaToatlID . "')";
+        $conexion->query($sentenciaInfantilD) or die("Error al ingresar los datos" . mysqli_error($conexion));
     }
 
     if ($piezasaIC >= 100) {
@@ -517,11 +525,245 @@ if ($piezasaIM >= 100 || $piezasaID >= 100 || $piezasaIC >= 100) {
         $sumaResIC = $resT2 + $resT4 + $resT6 + $resT8 + $resT10;
 
         echo "CANTIDAD" . '<br>';
-        echo "talla 2: " . $resT23 . '<br>';
-        echo "talla 4: " . $resT45 . '<br>';
-        echo "talla 6: " . $resT67 . '<br>';
-        echo "talla 8: " . $resT89 . '<br>';
-        echo "talla 10: " . $resT1011 . '<br>';
+        echo "talla 2: " . $resT2 . '<br>';
+        echo "talla 4: " . $resT4 . '<br>';
+        echo "talla 6: " . $resT6 . '<br>';
+        echo "talla 8: " . $resT8 . '<br>';
+        echo "talla 10: " . $resT10 . '<br>';
         echo "suma con acumulador: " . $sumaToatlIC . '<br>' . "suma sin acumulador: " . $sumaResIC . '<br>';
+
+        $sentenciaInfantilC = "INSERT INTO `talla_infantilc`(`cod_diseno`, `can_tic`, `t2cutic`, `t4cutic`, `t6cutic`, `t8cutic`, `t10cutic`, `t2catic`, `t4catic`, `t6catic`, `t8catic`, `t10catic`, `total_cantic`) VALUES 
+                                                        ('" . $codDis . "', '" . $piezasaIC . "' ,'" . $t2 . "','" . $t4 . "','" . $t6 . "','" . $t8 . "','" . $t10 . "','" . $resT2 . "','" . $resT4 . "','" . $resT6 . "','" . $resT8 . "','" . $resT10 . "','" . $sumaToatlIC . "')";
+        $conexion->query($sentenciaInfantilC) or die("Error al ingresar los datos" . mysqli_error($conexion));
     }
+}
+
+//adulto
+$cu = $_REQUEST["CU"];
+$cxs = $_REQUEST["CXS"];
+$cs = $_REQUEST["CS"];
+$cm = $_REQUEST["CM"];
+$cl = $_REQUEST["CL"];
+$cxl =  $_REQUEST["CXL"];
+$cxxl = $_REQUEST["CXXL"];
+$c3xl = $_REQUEST["C3XL"];
+$c4xl = $_REQUEST["C4XL"];
+
+if ($cu > 0 || $cxs > 0 || $cs > 0 || $cm > 0 || $cl > 0 || $cxl > 0 || $cxxl > 0 || $c3xl > 0 || $c4xl > 0) {
+    $totalCantidadAdulto = 0;
+    if ($cu > 0) {
+        $totalCantidadAdulto += $cu;
+    } else {
+        $cu = 0;
+    }
+    if ($cxs > 0) {
+        $totalCantidadAdulto += $cxs;
+    } else {
+        $cxs = 0;
+    }
+    if ($cs > 0) {
+        $totalCantidadAdulto += $cs;
+    } else {
+        $cs = 0;
+    }
+    if ($cm > 0) {
+        $totalCantidadAdulto += $cm;
+    } else {
+        $cm = 0;
+    }
+    if ($cl > 0) {
+        $totalCantidadAdulto += $cl;
+    } else {
+        $cl = 0;
+    }
+    if ($cxl > 0) {
+        $totalCantidadAdulto += $cxl;
+    } else {
+        $cxl = 0;
+    }
+    if ($cxxl > 0) {
+        $totalCantidadAdulto += $cxxl;
+    } else {
+        $cxxl = 0;
+    }
+    if ($c3xl > 0) {
+        $totalCantidadAdulto += $c3xl;
+    } else {
+        $c3xl = 0;
+    }
+    if ($c4xl > 0) {
+        $totalCantidadAdulto += $c4xl;
+    } else {
+        $c4xl = 0;
+    }
+
+    echo "total de piezas a producir en tallas adultos" . $totalCantidadAdulto . '<br>';
+
+    $cantidadAdulto = "INSERT INTO `talla_adulto`(`cod_diseno`, `ucaad`, `xscaad`, `scaad`, `mcaad`, `lcaad`, `xlcaad`, `xxlcaad`, `3xlcaad`, `4xlcaad`, `total_cant`) VALUES 
+                                                ('" . $codDis . "', '" . $cu . "', '" . $cxs . "', '" . $cs . "', '" . $cm . "', '" . $cl . "', '" . $cxl . "', '" . $cxxl . "', '" . $c3xl . "', '" . $c4xl . "', '" . $totalCantidadAdulto . "' )";
+    $conexion->query($cantidadAdulto) or die("Error al ingresar los datos" . mysqli_error($conexion));
+}
+
+//juvenil
+$ct12 = $_REQUEST["ct12"];
+$ct14 = $_REQUEST["ct14"];
+$ct16 = $_REQUEST["ct16"];
+
+if ($ct12 > 0 || $ct14 > 0 || $ct16 > 0) {
+    $totalCantidadJuvenil = 0;
+    if ($ct12 > 0) {
+        $totalCantidadJuvenil += $ct12;
+    } else {
+        $ct12 = 0;
+    }
+    if ($ct14 > 0) {
+        $totalCantidadJuvenil += $ct14;
+    } else {
+        $ct14 = 0;
+    }
+    if ($ct16 > 0) {
+        $totalCantidadJuvenil += $ct16;
+    } else {
+        $ct16 = 0;
+    }
+    echo "total de piezas a producir en tallas juvenil" . $totalCantidadJuvenil . '<br>';
+
+    $cantidadJuvenil = "INSERT INTO `talla_juvenil`(`cod_diseno`, `12caju`, `14caju`, `16aju`,`total_cant`) VALUES 
+                                                ('" . $codDis . "', '" . $ct12 . "', '" . $ct14 . "', '" . $ct16 . "', '" . $totalCantidadJuvenil . "' )";
+    $conexion->query($cantidadJuvenil) or die("Error al ingresar los datos" . mysqli_error($conexion));
+}
+
+// infantil Meses
+$ct3m = $_REQUEST["ct3m"];
+$ct6m = $_REQUEST["ct6m"];
+$ct9m = $_REQUEST["ct9m"];
+$ct12m = $_REQUEST["ct12m"];
+$ct18m = $_REQUEST["ct18m"];
+$ct24m = $_REQUEST["ct24m"];
+
+if ($ct3m > 0 || $ct6m > 0 || $ct9m > 0 || $ct12m > 0 || $ct18m > 0 || $ct24m > 0) {
+    $totalCantidadInfantilM = 0;
+    if ($ct3m > 0) {
+        $totalCantidadInfantilM += $ct3m;
+    } else {
+        $ct3m = 0;
+    }
+    if ($ct6m > 0) {
+        $totalCantidadInfantilM += $ct6m;
+    } else {
+        $ct6m = 0;
+    }
+    if ($ct9m > 0) {
+        $totalCantidadInfantilM += $ct9m;
+    } else {
+        $ct9m = 0;
+    }
+    if ($ct12m > 0) {
+        $totalCantidadInfantilM += $ct12m;
+    } else {
+        $ct12m = 0;
+    }
+    if ($ct18m > 0) {
+        $totalCantidadInfantilM += $ct18m;
+    } else {
+        $ct18m = 0;
+    }
+    if ($ct24m > 0) {
+        $totalCantidadInfantilM += $ct24m;
+    } else {
+        $ct24m = 0;
+    }
+
+    echo "total de piezas a producir en tallas infantil meses" . $totalCantidadInfantilM . '<br>';
+
+    $cantidadJuvenil = "INSERT INTO `talla_infantilm`(`cod_diseno`, `m3catim`, `m6catim`, `m9catim`,`m12catim`,`m18catim`,`m24catim`,`total_cantim`) VALUES 
+                                                ('" . $codDis . "', '" . $ct3m . "', '" . $ct6m . "', '" . $ct9m . "', '" . $ct12m . "', '" . $ct18m . "' , '" . $ct24m . "', '" . $totalCantidadInfantilM . "' )";
+    $conexion->query($cantidadJuvenil) or die("Error al ingresar los datos" . mysqli_error($conexion));
+}
+
+// infantil Dobles
+$mt23 = $_REQUEST["mt23"];
+$mt45 = $_REQUEST["mt45"];
+$mt67 = $_REQUEST["mt67"];
+$mt89 = $_REQUEST["mt89"];
+$mt1011 = $_REQUEST["mt1011"];
+
+if ($mt23 > 0 || $mt45 > 0 || $mt67 > 0 || $mt89 > 0 || $mt1011 > 0) {
+
+    $totalCantidadInfantilD = 0;
+
+    if ($mt23 > 0) {
+        $totalCantidadInfantilD += $mt23;
+    } else {
+        $mt23 = 0;
+    }
+    if ($mt45 > 0) {
+        $totalCantidadInfantilD += $mt45;
+    } else {
+        $mt45 = 0;
+    }
+    if ($mt67 > 0) {
+        $totalCantidadInfantilD += $mt67;
+    } else {
+        $mt67 = 0;
+    }
+    if ($mt89 > 0) {
+        $totalCantidadInfantilD += $mt89;
+    } else {
+        $mt89 = 0;
+    }
+    if ($mt1011 > 0) {
+        $totalCantidadInfantilD += $mt1011;
+    } else {
+        $mt1011 = 0;
+    }
+
+    echo "total de piezas a producir en tallas infantil doble" . $totalCantidadInfantilD . '<br>';
+
+    $cantidadInfantilD = "INSERT INTO `talla_infantild`(`cod_diseno`, `t23catid`, `t45catid`, `t67catid`,`t89catid`,`t1011catid`,`total_cantid`) VALUES 
+                                                    ('" . $codDis . "', '" . $mt23 . "', '" . $mt45 . "', '" . $mt67 . "', '" . $mt89 . "', '" . $mt1011 . "' , '" . $totalCantidadInfantilD . "' )";
+    $conexion->query($cantidadInfantilD) or die("Error al ingresar los datos" . mysqli_error($conexion));
+}
+
+// infantil Completa
+$ct2 = $_REQUEST["ct2"];
+$ct4 = $_REQUEST["ct4"];
+$ct6 = $_REQUEST["ct6"];
+$ct8 = $_REQUEST["ct8"];
+$ct10 = $_REQUEST["ct10"];
+
+if ($ct2 > 0 || $ct4 > 0 || $ct6 > 0 || $ct8 > 0 || $ct10 > 0) {
+    $totalCantidadInfantilC = 0;
+    if ($ct2 > 0) {
+        $totalCantidadInfantilC += $ct2;
+    } else {
+        $ct2 = 0;
+    }
+    if ($ct4 > 0) {
+        $totalCantidadInfantilC += $ct4;
+    } else {
+        $ct4 = 0;
+    }
+    if ($ct6 > 0) {
+        $totalCantidadInfantilC += $ct6;
+    } else {
+        $ct6 = 0;
+    }
+    if ($ct8 > 0) {
+        $totalCantidadInfantilC += $ct8;
+    } else {
+        $ct8 = 0;
+    }
+    if ($ct10 > 0) {
+        $totalCantidadInfantilC += $ct10;
+    } else {
+        $ct10 = 0;
+    }
+
+    echo "total de piezas a producir en tallas infantil completa" . $totalCantidadInfantilC . '<br>';
+
+    $cantidadInfantilD = "INSERT INTO `talla_infantilc`(`cod_diseno`, `t2catic`, `t4catic`, `t6catic`,`t8catic`,`t10catic`,`total_cantic`) VALUES 
+                                                    ('" . $codDis . "', '" . $ct2 . "', '" . $ct4 . "', '" . $ct6 . "', '" . $ct8 . "', '" . $ct10 . "' , '" . $totalCantidadInfantilC . "' )";
+    $conexion->query($cantidadInfantilD) or die("Error al ingresar los datos" . mysqli_error($conexion));
+
 }
